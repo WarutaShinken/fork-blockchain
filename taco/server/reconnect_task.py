@@ -1,11 +1,11 @@
 import asyncio
 import socket
 
-from fork.server.server import TacoServer
+from fork.server.server import ForkServer
 from fork.types.peer_info import PeerInfo
 
 
-def start_reconnect_task(server: TacoServer, peer_info_arg: PeerInfo, log, auth: bool):
+def start_reconnect_task(server: ForkServer, peer_info_arg: PeerInfo, log, auth: bool):
     """
     Start a background task that checks connection and reconnects periodically to a peer.
     """

@@ -114,7 +114,7 @@ export default function About(props: Props) {
         </StyledLink>
         <StyledSubTitle>{description}</StyledSubTitle>
         <Spacer />
-        <div className="copyright">Copyright (c) 2021 Taco Network</div>
+        <div className="copyright">Copyright (c) 2021 Fork Network</div>
         <Spacer />
         <VersionsTable>
           {versions?.electron && (
@@ -144,7 +144,7 @@ export default function About(props: Props) {
         </VersionsTable>
 
         <BugReport
-          href="https://github.com/Taco-Network/fork-blockchain/issues"
+          href="https://github.com/Fork-Network/fork-blockchain/issues"
           target="_blank"
         >
           Report an issue

@@ -16,7 +16,7 @@ from fork.protocols.protocol_message_types import ProtocolMessageTypes
 from fork.server.address_manager import AddressManager, ExtendedPeerInfo
 from fork.server.address_manager_store import AddressManagerStore
 from fork.server.outbound_message import NodeType, make_msg
-from fork.server.server import TacoServer
+from fork.server.server import ForkServer
 from fork.types.peer_info import PeerInfo, TimestampedPeerInfo
 from fork.util.hash import std_hash
 from fork.util.ints import uint64
@@ -37,7 +37,7 @@ class FullNodeDiscovery:
 
     def __init__(
         self,
-        server: TacoServer,
+        server: ForkServer,
         root_path: Path,
         target_outbound_count: int,
         peer_db_path: str,
@@ -48,7 +48,7 @@ class FullNodeDiscovery:
         default_port: Optional[int],
         log,
     ):
-        self.server: TacoServer = server
+        self.server: ForkServer = server
         self.message_queue: asyncio.Queue = asyncio.Queue()
         self.is_closed = False
         self.target_outbound_count = target_outbound_count
@@ -127,7 +127,7 @@ class FullNodeDiscovery:
     def add_message(self, message, data):
         self.message_queue.put_nowait((message, data))
 
-    async def on_connect(self, peer: ws.WSTacoConnection):
+    async def on_connect(self, peer: ws.WSForkConnection):
         if (
             peer.is_outbound is False
             and peer.peer_server_port is not None
@@ -154,7 +154,7 @@ class FullNodeDiscovery:
             await peer.send_message(msg)
 
     # Updates timestamps each time we receive a message for outbound connections.
-    async def update_peer_timestamp_on_message(self, peer: ws.WSTacoConnection):
+    async def update_peer_timestamp_on_message(self, peer: ws.WSForkConnection):
         if (
             peer.is_outbound
             and peer.peer_server_port is not None
@@ -192,7 +192,7 @@ class FullNodeDiscovery:
         if self.introducer_info is None:
             return None
 
-        async def on_connect(peer: ws.WSTacoConnection):
+        async def on_connect(peer: ws.WSForkConnection):
             msg = make_msg(ProtocolMessageTypes.request_peers_introducer, introducer_protocol.RequestPeersIntroducer())
             await peer.send_message(msg)
 

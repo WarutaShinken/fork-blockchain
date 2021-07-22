@@ -223,7 +223,7 @@ if (!handleSquirrelEvent()) {
       app.applicationMenu = createMenu();
       // if the daemon isn't local we aren't going to try to start/stop it
       if (forkConfig.manageDaemonLifetime()) {
-        forkEnvironment.startTacoDaemon();
+        forkEnvironment.startForkDaemon();
       }
     };
 
@@ -355,10 +355,10 @@ if (!handleSquirrelEvent()) {
         role: 'help',
         submenu: [
           {
-            label: i18n._(/* i18n */ { id: 'Taco Blockchain Wiki' }),
+            label: i18n._(/* i18n */ { id: 'Fork Blockchain Wiki' }),
             click: () => {
               openExternal(
-                'https://github.com/Taco-Network/fork-blockchain/wiki',
+                'https://github.com/Fork-Network/fork-blockchain/wiki',
               );
             },
           },
@@ -366,7 +366,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Frequently Asked Questions' }),
             click: () => {
               openExternal(
-                'https://github.com/Taco-Network/fork-blockchain/wiki/FAQ',
+                'https://github.com/Fork-Network/fork-blockchain/wiki/FAQ',
               );
             },
           },
@@ -374,7 +374,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Release Notes' }),
             click: () => {
               openExternal(
-                'https://github.com/Taco-Network/fork-blockchain/releases',
+                'https://github.com/Fork-Network/fork-blockchain/releases',
               );
             },
           },
@@ -382,7 +382,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Contribute on GitHub' }),
             click: () => {
               openExternal(
-                'https://github.com/Taco-Network/fork-blockchain/blob/master/CONTRIBUTING.md',
+                'https://github.com/Fork-Network/fork-blockchain/blob/master/CONTRIBUTING.md',
               );
             },
           },
@@ -393,7 +393,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Report an Issue...' }),
             click: () => {
               openExternal(
-                'https://github.com/Taco-Network/fork-blockchain/issues',
+                'https://github.com/Fork-Network/fork-blockchain/issues',
               );
             },
           },
@@ -414,12 +414,12 @@ if (!handleSquirrelEvent()) {
     ];
 
     if (process.platform === 'darwin') {
-      // Taco Blockchain menu (Mac)
+      // Fork Blockchain menu (Mac)
       template.unshift({
-        label: i18n._(/* i18n */ { id: 'Taco' }),
+        label: i18n._(/* i18n */ { id: 'Fork' }),
         submenu: [
           {
-            label: i18n._(/* i18n */ { id: 'About Taco Blockchain' }),
+            label: i18n._(/* i18n */ { id: 'About Fork Blockchain' }),
             click: () => {
               openAbout();
             },
@@ -506,7 +506,7 @@ if (!handleSquirrelEvent()) {
           type: 'separator',
         },
         {
-          label: i18n._(/* i18n */ { id: 'About Taco Blockchain' }),
+          label: i18n._(/* i18n */ { id: 'About Fork Blockchain' }),
           click() {
             openAbout();
           },

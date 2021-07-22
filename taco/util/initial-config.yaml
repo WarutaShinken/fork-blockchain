@@ -71,25 +71,25 @@ network_overrides: &network_overrides
       DIFFICULTY_STARTING: 30
   config:
     mainnet:
-      address_prefix: "xtx"
+      address_prefix: "xfk"
       default_full_node_port: 18620
     testnet0:
-      address_prefix: "txtx"
+      address_prefix: "txfk"
     testnet1:
-      address_prefix: "txtx"
+      address_prefix: "txfk"
     testnet2:
-      address_prefix: "txtx"
+      address_prefix: "txfk"
     testnet3:
-      address_prefix: "txtx"
+      address_prefix: "txfk"
     testnet4:
-      address_prefix: "txtx"
+      address_prefix: "txfk"
     testnet7:
-      address_prefix: "txtx"
+      address_prefix: "txfk"
       default_full_node_port: 58444
 
 selected_network: &selected_network "mainnet"
 ALERTS_URL: https://download.forknetwork.net/notify/mainnet_alert.txt
-TACO_ALERTS_PUBKEY: 89b7fd87cb56e926ecefb879a29aae308be01f31980569f6a75a69d2a9a69daefd71fb778d865f7c50d6c967e3025937
+FORK_ALERTS_PUBKEY: 89b7fd87cb56e926ecefb879a29aae308be01f31980569f6a75a69d2a9a69daefd71fb778d865f7c50d6c967e3025937
 
 # public ssl ca is included in source code
 # Private ssl ca is used for trusted connections between machines user owns
@@ -151,7 +151,7 @@ harvester:
 
 pool:
   # Replace this with a real puzzle hash
-  # xtx_target_address: txtx102gkhhzs60grx7cfnpng5n6rjecr89r86l5s8xux2za8k820cxsq64ssdg
+  # xfk_target_address: txfk102gkhhzs60grx7cfnpng5n6rjecr89r86l5s8xux2za8k820cxsq64ssdg
   logging: *logging
   network_overrides: *network_overrides
   selected_network: *selected_network
@@ -171,7 +171,7 @@ farmer:
   pool_public_keys: []
 
   # Replace this with a real puzzle hash
-  # xtx_target_address: txtx102gkhhzs60grx7cfnpng5n6rjecr89r86l5s8xux2za8k820cxsq64ssdg
+  # xfk_target_address: txfk102gkhhzs60grx7cfnpng5n6rjecr89r86l5s8xux2za8k820cxsq64ssdg
 
   # If True, starts an RPC server at the following port
   start_rpc_server: True
@@ -310,7 +310,7 @@ full_node:
       host: *self_hostname
       port: 18622
   introducer_peer:
-      host: introducer.forknetwork.net  # Taco AWS introducer IPv4/IPv6
+      host: introducer.forknetwork.net  # Fork AWS introducer IPv4/IPv6
       port: 18620
   wallet_peer:
     host: *self_hostname
@@ -394,7 +394,7 @@ wallet:
   recent_peer_threshold: 6000
 
   introducer_peer:
-    host: introducer.forknetwork.net # Taco AWS introducer IPv4/IPv6
+    host: introducer.forknetwork.net # Fork AWS introducer IPv4/IPv6
     port: 18620
 
   ssl:

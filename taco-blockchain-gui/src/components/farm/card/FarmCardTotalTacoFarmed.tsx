@@ -6,7 +6,7 @@ import FarmCard from './FarmCard';
 import { mojo_to_fork } from '../../../util/fork';
 import useCurrencyCode from '../../../hooks/useCurrencyCode';
 
-export default function FarmCardTotalTacoFarmed() {
+export default function FarmCardTotalForkFarmed() {
   const currencyCode = useCurrencyCode();
 
   const loading = useSelector(
@@ -17,7 +17,7 @@ export default function FarmCardTotalTacoFarmed() {
     (state: RootState) => state.wallet_state.farmed_amount?.farmed_amount,
   );
 
-  const totalTacoFarmed = useMemo(() => {
+  const totalForkFarmed = useMemo(() => {
     if (farmedAmount !== undefined) {
       const val = BigInt(farmedAmount.toString());
       return mojo_to_fork(val);
@@ -26,8 +26,8 @@ export default function FarmCardTotalTacoFarmed() {
 
   return (
     <FarmCard
-      title={<Trans>{currencyCode} Total Taco Farmed</Trans>}
-      value={totalTacoFarmed}
+      title={<Trans>{currencyCode} Total Fork Farmed</Trans>}
+      value={totalForkFarmed}
       loading={loading}
     />
   );

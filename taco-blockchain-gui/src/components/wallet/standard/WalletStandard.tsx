@@ -5,7 +5,7 @@ import {
   Amount,
   Fee,
   Form,
-  TextField as TacoTextField,
+  TextField as ForkTextField,
   AlertDialog,
   CopyToClipboard,
   Flex,
@@ -285,9 +285,9 @@ function BalanceCard(props: BalanceCardProps) {
         balance={balance_spendable}
         tooltip={
           <Trans>
-            This is the amount of Taco that you can currently use to make
+            This is the amount of Fork that you can currently use to make
             transactions. It does not include pending farming rewards, pending
-            incoming transactions, and Taco that you have just spent but is not
+            incoming transactions, and Fork that you have just spent but is not
             yet in the blockchain.
           </Trans>
         }
@@ -494,7 +494,7 @@ function SendCard(props: SendCardProps) {
       <Form methods={methods} onSubmit={handleSubmit}>
         <Grid spacing={2} container>
           <Grid xs={12} item>
-            <TacoTextField
+            <ForkTextField
               name="address"
               variant="filled"
               color="secondary"
@@ -644,7 +644,7 @@ export default function StandardWallet(props: StandardWalletProps) {
       <Flex gap={1} alignItems="center">
         <Flex flexGrow={1}>
           <Typography variant="h5" gutterBottom>
-            <Trans>Taco Wallet</Trans>
+            <Trans>Fork Wallet</Trans>
           </Typography>
         </Flex>
         <More>

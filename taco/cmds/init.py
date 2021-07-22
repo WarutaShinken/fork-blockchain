@@ -20,8 +20,8 @@ def init_cmd(ctx: click.Context, create_certs: str):
     - Shut down all fork daemon processes with `fork stop all -d`
     - Run `fork init -c [directory]` on your remote harvester,
       where [directory] is the the copy of your Farming Machine CA directory
-    - Get more details on remote harvester on Taco wiki:
-      https://github.com/Taco-Network/fork-blockchain/wiki/Farming-on-many-machines
+    - Get more details on remote harvester on Fork wiki:
+      https://github.com/Fork-Network/fork-blockchain/wiki/Farming-on-many-machines
     """
     from pathlib import Path
     from .init_funcs import init

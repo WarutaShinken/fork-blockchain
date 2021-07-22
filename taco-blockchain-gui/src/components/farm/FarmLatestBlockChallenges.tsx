@@ -62,13 +62,13 @@ export default function FarmLatestBlockChallenges() {
       />
       <Typography variant="caption">
         <Trans>
-          *Want to explore Taco’s blocks further? Check out{' '}
+          *Want to explore Fork’s blocks further? Check out{' '}
           <Link
             color="primary"
             href="https://fork.posat.io/"
             target="_blank"
           >
-            Taco Explorer
+            Fork Explorer
           </Link>{' '}
           built by that one smart guy on discord.
         </Trans>

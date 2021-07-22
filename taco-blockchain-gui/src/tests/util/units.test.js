@@ -18,7 +18,7 @@ describe('units', () => {
       expect(result).toBe(1e-9);
     });
     it('supports uppercase characters', () => {
-      const result = units.getUnit('TACO');
+      const result = units.getUnit('FORK');
 
       expect(result).toBe(1);
     });
@@ -112,14 +112,14 @@ describe('units', () => {
     });
     it('updates an existing display', () => {
       units.setDisplay('fork', {
-        format: '{amount} TXTX',
+        format: '{amount} TXFK',
         fractionDigits: 0,
       });
 
       const result = units.getDisplay('fork');
 
       expect(result).toEqual({
-        format: '{amount} TXTX',
+        format: '{amount} TXFK',
         fractionDigits: 0,
       });
     });

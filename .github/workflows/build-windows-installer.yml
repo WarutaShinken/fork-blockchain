@@ -91,7 +91,7 @@ jobs:
       uses: actions/upload-artifact@v2.2.2
       with:
         name: Windows-Exe
-        path: ${{ github.workspace }}\fork-blockchain-gui\Taco-win32-x64\
+        path: ${{ github.workspace }}\fork-blockchain-gui\Fork-win32-x64\
 
     - name: Upload Installer to artifacts
       uses: actions/upload-artifact@v2.2.2

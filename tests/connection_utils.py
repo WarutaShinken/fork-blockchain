@@ -9,8 +9,8 @@ from cryptography.hazmat.primitives import hashes, serialization
 
 from fork.protocols.shared_protocol import protocol_version
 from fork.server.outbound_message import NodeType
-from fork.server.server import TacoServer, ssl_context_for_client
-from fork.server.ws_connection import WSTacoConnection
+from fork.server.server import ForkServer, ssl_context_for_client
+from fork.server.ws_connection import WSForkConnection
 from fork.ssl.create_ssl import generate_ca_signed_cert
 from fork.types.blockchain_format.sized_bytes import bytes32
 from fork.types.peer_info import PeerInfo
@@ -21,14 +21,14 @@ from tests.time_out_assert import time_out_assert
 log = logging.getLogger(__name__)
 
 
-async def disconnect_all_and_reconnect(server: TacoServer, reconnect_to: TacoServer) -> bool:
+async def disconnect_all_and_reconnect(server: ForkServer, reconnect_to: ForkServer) -> bool:
     cons = list(server.all_connections.values())[:]
     for con in cons:
         await con.close()
     return await server.start_client(PeerInfo(self_hostname, uint16(reconnect_to._port)), None)
 
 
-async def add_dummy_connection(server: TacoServer, dummy_port: int) -> Tuple[asyncio.Queue, bytes32]:
+async def add_dummy_connection(server: ForkServer, dummy_port: int) -> Tuple[asyncio.Queue, bytes32]:
     timeout = aiohttp.ClientTimeout(total=10)
     session = aiohttp.ClientSession(timeout=timeout)
     incoming_queue: asyncio.Queue = asyncio.Queue()
@@ -45,7 +45,7 @@ async def add_dummy_connection(server: TacoServer, dummy_port: int) -> Tuple[asy
     peer_id = bytes32(der_cert.fingerprint(hashes.SHA256()))
     url = f"wss://{self_hostname}:{server._port}/ws"
     ws = await session.ws_connect(url, autoclose=True, autoping=True, ssl=ssl_context)
-    wsc = WSTacoConnection(
+    wsc = WSForkConnection(
         NodeType.FULL_NODE,
         ws,
         server._port,
@@ -64,7 +64,7 @@ async def add_dummy_connection(server: TacoServer, dummy_port: int) -> Tuple[asy
     return incoming_queue, peer_id
 
 
-async def connect_and_get_peer(server_1: TacoServer, server_2: TacoServer) -> WSTacoConnection:
+async def connect_and_get_peer(server_1: ForkServer, server_2: ForkServer) -> WSForkConnection:
     """
     Connect server_2 to server_1, and get return the connection in server_1.
     """

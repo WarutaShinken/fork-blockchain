@@ -16,7 +16,7 @@ except ImportError:
 
 from fork.rpc.rpc_server import start_rpc_server
 from fork.server.outbound_message import NodeType
-from fork.server.server import TacoServer
+from fork.server.server import ForkServer
 from fork.server.upnp import UPnP
 from fork.types.peer_info import PeerInfo
 from fork.util.fork_logging import initialize_logging
@@ -80,7 +80,7 @@ class Service:
         inbound_rlp = self.config.get("inbound_rate_limit_percent")
         outbound_rlp = self.config.get("outbound_rate_limit_percent")
         assert inbound_rlp and outbound_rlp
-        self._server = TacoServer(
+        self._server = ForkServer(
             advertised_port,
             node,
             peer_api,
@@ -226,7 +226,7 @@ class Service:
 
         self._log.info("Waiting for socket to be closed (if opened)")
 
-        self._log.info("Waiting for TacoServer to be closed")
+        self._log.info("Waiting for ForkServer to be closed")
         await self._server.await_closed()
 
         if self._rpc_close_task:

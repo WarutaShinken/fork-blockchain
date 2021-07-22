@@ -44,7 +44,7 @@ kwargs = dict(
     name="fork-blockchain",
     author="Mariano Sorgente",
     author_email="mariano@forknetwork.net",
-    description="Taco blockchain full node, farmer, timelord, and wallet.",
+    description="Fork blockchain full node, farmer, timelord, and wallet.",
     url="https://forknetwork.net/",
     license="Apache License",
     python_requires=">=3.7, <4",

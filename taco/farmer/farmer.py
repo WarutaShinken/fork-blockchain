@@ -27,7 +27,7 @@ from fork.protocols.pool_protocol import (
 )
 from fork.protocols.protocol_message_types import ProtocolMessageTypes
 from fork.server.outbound_message import NodeType, make_msg
-from fork.server.ws_connection import WSTacoConnection
+from fork.server.ws_connection import WSForkConnection
 from fork.types.blockchain_format.proof_of_space import ProofOfSpace
 from fork.types.blockchain_format.sized_bytes import bytes32
 from fork.util.bech32m import decode_puzzle_hash
@@ -119,13 +119,13 @@ class Farmer:
             raise RuntimeError(error_str)
 
         # This is the farmer configuration
-        self.farmer_target_encoded = self.config["xtx_target_address"]
+        self.farmer_target_encoded = self.config["xfk_target_address"]
         self.farmer_target = decode_puzzle_hash(self.farmer_target_encoded)
 
         self.pool_public_keys = [G1Element.from_bytes(bytes.fromhex(pk)) for pk in self.config["pool_public_keys"]]
 
         # This is the self pooling configuration, which is only used for original self-pooled plots
-        self.pool_target_encoded = pool_config["xtx_target_address"]
+        self.pool_target_encoded = pool_config["xfk_target_address"]
         self.pool_target = decode_puzzle_hash(self.pool_target_encoded)
         self.pool_sks_map: Dict = {}
         for key in self.get_private_keys():
@@ -164,7 +164,7 @@ class Farmer:
     def _set_state_changed_callback(self, callback: Callable):
         self.state_changed_callback = callback
 
-    async def on_connect(self, peer: WSTacoConnection):
+    async def on_connect(self, peer: WSForkConnection):
         # Sends a handshake to the harvester
         self.state_changed("add_connection", {})
         handshake = harvester_protocol.HarvesterHandshake(
@@ -188,7 +188,7 @@ class Farmer:
             ErrorResponse(uint16(PoolErrorCode.REQUEST_FAILED.value), error_message).to_json_dict()
         )
 
-    def on_disconnect(self, connection: ws.WSTacoConnection):
+    def on_disconnect(self, connection: ws.WSForkConnection):
         self.log.info(f"peer disconnected {connection.get_peer_info()}")
         self.state_changed("close_connection", {})
 
@@ -494,11 +494,11 @@ class Farmer:
         if farmer_target_encoded is not None:
             self.farmer_target_encoded = farmer_target_encoded
             self.farmer_target = decode_puzzle_hash(farmer_target_encoded)
-            config["farmer"]["xtx_target_address"] = farmer_target_encoded
+            config["farmer"]["xfk_target_address"] = farmer_target_encoded
         if pool_target_encoded is not None:
             self.pool_target_encoded = pool_target_encoded
             self.pool_target = decode_puzzle_hash(pool_target_encoded)
-            config["pool"]["xtx_target_address"] = pool_target_encoded
+            config["pool"]["xfk_target_address"] = pool_target_encoded
         save_config(self._root_path, "config.yaml", config)
 
     async def set_payout_instructions(self, launcher_id: bytes32, payout_instructions: str):
@@ -587,7 +587,7 @@ class Farmer:
                         "Harvester did not respond. You might need to update harvester to the latest version"
                     )
 
-    async def get_cached_harvesters(self, connection: WSTacoConnection) -> HarvesterCacheEntry:
+    async def get_cached_harvesters(self, connection: WSForkConnection) -> HarvesterCacheEntry:
         host_cache = self.harvester_cache.get(connection.peer_host)
         if host_cache is None:
             host_cache = {}

@@ -5,7 +5,7 @@ const units = {
 };
 
 const aliases = {
-  fork: ['ch', 'fork', 'Taco'],
+  fork: ['ch', 'fork', 'Fork'],
   mojo: ['mj', 'mojo'],
   colouredcoin: ['cc', 'colouredcoin'],
 };

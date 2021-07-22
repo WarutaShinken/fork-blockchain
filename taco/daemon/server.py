@@ -33,7 +33,7 @@ io_pool_exc = ThreadPoolExecutor()
 try:
     from aiohttp import ClientSession, web
 except ModuleNotFoundError:
-    print("Error: Make sure to run . ./activate from the project folder before starting Taco.")
+    print("Error: Make sure to run . ./activate from the project folder before starting Fork.")
     quit()
 
 try:
@@ -749,8 +749,8 @@ def plotter_log_path(root_path: Path, id: str):
 
 
 def launch_plotter(root_path: Path, service_name: str, service_array: List[str], id: str):
-    # we need to pass on the possibly altered TACO_ROOT
-    os.environ["TACO_ROOT"] = str(root_path)
+    # we need to pass on the possibly altered FORK_ROOT
+    os.environ["FORK_ROOT"] = str(root_path)
     service_executable = executable_for_service(service_array[0])
 
     # Swap service name with name of executable
@@ -799,14 +799,14 @@ def launch_service(root_path: Path, service_command) -> Tuple[subprocess.Popen, 
     """
     Launch a child process.
     """
-    # set up TACO_ROOT
+    # set up FORK_ROOT
     # invoke correct script
     # save away PID
 
-    # we need to pass on the possibly altered TACO_ROOT
-    os.environ["TACO_ROOT"] = str(root_path)
+    # we need to pass on the possibly altered FORK_ROOT
+    os.environ["FORK_ROOT"] = str(root_path)
 
-    log.debug(f"Launching service with TACO_ROOT: {os.environ['TACO_ROOT']}")
+    log.debug(f"Launching service with FORK_ROOT: {os.environ['FORK_ROOT']}")
 
     # Insert proper e
     service_array = service_command.split()

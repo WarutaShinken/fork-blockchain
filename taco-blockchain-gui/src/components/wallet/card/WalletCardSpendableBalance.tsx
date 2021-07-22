@@ -24,9 +24,9 @@ export default function WalletCardSpendableBalance(props: Props) {
       title={<Trans>Spendable Balance</Trans>}
       tooltip={
         <Trans>
-          This is the amount of Taco that you can currently use to make
+          This is the amount of Fork that you can currently use to make
           transactions. It does not include pending farming rewards, pending
-          incoming transactions, and Taco that you have just spent but is not
+          incoming transactions, and Fork that you have just spent but is not
           yet in the blockchain.
         </Trans>
       }

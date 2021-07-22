@@ -12,7 +12,7 @@ const convert = (amount, from, to) => {
   return Number.parseFloat(amountInFromUnit.div(units.getUnit(to)));
 };
 
-class Taco {
+class Fork {
   constructor(value, unit) {
     this._value = value;
     this._unit = unit;
@@ -73,7 +73,7 @@ class Taco {
   }
 }
 
-export const fork_formatter = (value, unit) => new Taco(value, unit);
+export const fork_formatter = (value, unit) => new Fork(value, unit);
 
 fork_formatter.convert = convert;
 fork_formatter.setDisplay = units.setDisplay;

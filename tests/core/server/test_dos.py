@@ -12,7 +12,7 @@ from fork.protocols.shared_protocol import Handshake
 from fork.server.outbound_message import make_msg, Message
 from fork.server.rate_limits import RateLimiter
 from fork.server.server import ssl_context_for_client
-from fork.server.ws_connection import WSTacoConnection
+from fork.server.ws_connection import WSForkConnection
 from fork.types.peer_info import PeerInfo
 from fork.util.ints import uint16, uint64
 from fork.util.errors import Err
@@ -188,8 +188,8 @@ class TestDos:
 
         assert len(server_1.all_connections) == 1
 
-        ws_con: WSTacoConnection = list(server_1.all_connections.values())[0]
-        ws_con_2: WSTacoConnection = list(server_2.all_connections.values())[0]
+        ws_con: WSForkConnection = list(server_1.all_connections.values())[0]
+        ws_con_2: WSForkConnection = list(server_2.all_connections.values())[0]
 
         ws_con.peer_host = "1.2.3.4"
         ws_con_2.peer_host = "1.2.3.4"
@@ -241,8 +241,8 @@ class TestDos:
 
         assert len(server_1.all_connections) == 1
 
-        ws_con: WSTacoConnection = list(server_1.all_connections.values())[0]
-        ws_con_2: WSTacoConnection = list(server_2.all_connections.values())[0]
+        ws_con: WSForkConnection = list(server_1.all_connections.values())[0]
+        ws_con_2: WSForkConnection = list(server_2.all_connections.values())[0]
 
         ws_con.peer_host = "1.2.3.4"
         ws_con_2.peer_host = "1.2.3.4"
@@ -290,8 +290,8 @@ class TestDos:
 
         assert len(server_1.all_connections) == 1
 
-        ws_con: WSTacoConnection = list(server_1.all_connections.values())[0]
-        ws_con_2: WSTacoConnection = list(server_2.all_connections.values())[0]
+        ws_con: WSForkConnection = list(server_1.all_connections.values())[0]
+        ws_con_2: WSForkConnection = list(server_2.all_connections.values())[0]
 
         ws_con.peer_host = "1.2.3.4"
         ws_con_2.peer_host = "1.2.3.4"

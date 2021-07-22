@@ -45,7 +45,7 @@ const getExecutablePath = (dist_file) => {
   return path.join(__dirname, PY_MAC_DIST_FOLDER, dist_file);
 };
 
-const getTacoVersion = () => {
+const getForkVersion = () => {
   let version = null;
   const exePath = getExecutablePath('fork');
   // first see if we can get a fork exe in a standard location relative to where we are
@@ -71,7 +71,7 @@ const getTacoVersion = () => {
   return version;
 };
 
-const startTacoDaemon = () => {
+const startForkDaemon = () => {
   let script = getScriptPath(PY_DIST_FILE);
   let processOptions = {};
   //processOptions.detached = true;
@@ -138,7 +138,7 @@ const startTacoDaemon = () => {
 };
 
 module.exports = {
-  startTacoDaemon,
-  getTacoVersion,
+  startForkDaemon,
+  getForkVersion,
   guessPackaged,
 };

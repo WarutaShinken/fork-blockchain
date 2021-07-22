@@ -8,8 +8,8 @@ type Options = {
 };
 
 const defaultOptions = {
-  to: Unit.TACO,
-  from: Unit.TACO,
+  to: Unit.FORK,
+  from: Unit.FORK,
 };
 
 export default function unitFormat(value: number, options: Options): string {

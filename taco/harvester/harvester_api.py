@@ -13,7 +13,7 @@ from fork.protocols.farmer_protocol import FarmingInfo
 from fork.protocols.harvester_protocol import Plot
 from fork.protocols.protocol_message_types import ProtocolMessageTypes
 from fork.server.outbound_message import make_msg
-from fork.server.ws_connection import WSTacoConnection
+from fork.server.ws_connection import WSForkConnection
 from fork.types.blockchain_format.proof_of_space import ProofOfSpace
 from fork.types.blockchain_format.sized_bytes import bytes32
 from fork.util.api_decorators import api_request, peer_required
@@ -49,7 +49,7 @@ class HarvesterAPI:
     @peer_required
     @api_request
     async def new_signage_point_harvester(
-        self, new_challenge: harvester_protocol.NewSignagePointHarvester, peer: WSTacoConnection
+        self, new_challenge: harvester_protocol.NewSignagePointHarvester, peer: WSForkConnection
     ):
         """
         The harvester receives a new signage point from the farmer, this happens at the start of each slot.

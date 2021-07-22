@@ -12,16 +12,16 @@ else
 fi
 
 pip install setuptools_scm
-# The environment variable TACO_INSTALLER_VERSION needs to be defined
+# The environment variable FORK_INSTALLER_VERSION needs to be defined
 # If the env variable NOTARIZE and the username and password variables are
 # set, this will attempt to Notarize the signed DMG
-TACO_INSTALLER_VERSION=$(python installer-version.py)
+FORK_INSTALLER_VERSION=$(python installer-version.py)
 
-if [ ! "$TACO_INSTALLER_VERSION" ]; then
-	echo "WARNING: No environment variable TACO_INSTALLER_VERSION set. Using 0.0.0."
-	TACO_INSTALLER_VERSION="0.0.0"
+if [ ! "$FORK_INSTALLER_VERSION" ]; then
+	echo "WARNING: No environment variable FORK_INSTALLER_VERSION set. Using 0.0.0."
+	FORK_INSTALLER_VERSION="0.0.0"
 fi
-echo "Taco Installer Version is: $TACO_INSTALLER_VERSION"
+echo "Fork Installer Version is: $FORK_INSTALLER_VERSION"
 
 echo "Installing npm and electron packagers"
 npm install electron-packager -g
@@ -56,8 +56,8 @@ if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 fi
 
 electron-packager . fork-blockchain --asar.unpack="**/daemon/**" --platform=linux \
---icon=src/assets/img/Taco.icns --overwrite --app-bundle-id=net.fork.blockchain \
---appVersion=$TACO_INSTALLER_VERSION
+--icon=src/assets/img/Fork.icns --overwrite --app-bundle-id=net.fork.blockchain \
+--appVersion=$FORK_INSTALLER_VERSION
 LAST_EXIT_CODE=$?
 if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 	echo >&2 "electron-packager failed!"
@@ -67,11 +67,11 @@ fi
 mv $DIR_NAME ../build_scripts/dist/
 cd ../build_scripts || exit
 
-echo "Create fork-$TACO_INSTALLER_VERSION.deb"
+echo "Create fork-$FORK_INSTALLER_VERSION.deb"
 rm -rf final_installer
 mkdir final_installer
 electron-installer-debian --src dist/$DIR_NAME/ --dest final_installer/ \
---arch "$PLATFORM" --options.version $TACO_INSTALLER_VERSION
+--arch "$PLATFORM" --options.version $FORK_INSTALLER_VERSION
 LAST_EXIT_CODE=$?
 if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 	echo >&2 "electron-installer-debian failed!"

@@ -15,7 +15,7 @@ msgstr ""
 "X-Crowdin-Project: fork-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: fr\n"
-"X-Crowdin-File: /[Taco-Network.fork-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Fork-Network.fork-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -23,8 +23,8 @@ msgid "(Optional)"
 msgstr "(Facultatif)"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
-msgid "*Want to explore Taco’s blocks further? Check out <0>Taco Explorer</0> built by an open source developer."
-msgstr "*Vous voulez explorer la blockchain Taco plus en détail ? Consultez <0>Taco Explorer</0> construit par un développeur open source."
+msgid "*Want to explore Fork’s blocks further? Check out <0>Fork Explorer</0> built by an open source developer."
+msgstr "*Vous voulez explorer la blockchain Fork plus en détail ? Consultez <0>Fork Explorer</0> construit par un développeur open source."
 
 #: src/components/plot/add/PlotAddNFT.tsx:123
 msgid "+ Add New Plot NFT"
@@ -44,8 +44,8 @@ msgstr "Le moissonneur est un service qui tourne sur une machine qui stocke des 
 
 #: src/electron/main.tsx:422
 #: src/electron/main.tsx:509
-msgid "About Taco Blockchain"
-msgstr "À propos de la blockchain Taco"
+msgid "About Fork Blockchain"
+msgstr "À propos de la blockchain Fork"
 
 #: src/components/trading/ViewOffer.jsx:74
 msgid "Accept"
@@ -216,8 +216,8 @@ msgid "Block VDF Iterations"
 msgstr "Itération du bloc VDF"
 
 #: src/components/block/Block.jsx:336
-msgid "Block at height {0} in the Taco blockchain"
-msgstr "Bloc à la hauteur {0} dans la blockchain Taco"
+msgid "Block at height {0} in the Fork blockchain"
+msgstr "Bloc à la hauteur {0} dans la blockchain Fork"
 
 #: src/components/fullNode/FullNode.jsx:331
 #~ msgid "Block hash"
@@ -674,8 +674,8 @@ msgid "Edit"
 msgstr "Éditer"
 
 #: src/components/wallet/WalletImport.tsx:147
-msgid "Enter the 24 word mnemonic that you have saved in order to restore your Taco wallet."
-msgstr "Entrez les 24 mots mnémotechniques que vous avez sauvegardé afin de restaurer votre portefeuille Taco."
+msgid "Enter the 24 word mnemonic that you have saved in order to restore your Fork wallet."
+msgstr "Entrez les 24 mots mnémotechniques que vous avez sauvegardé afin de restaurer votre portefeuille Fork."
 
 #: src/components/farm/FarmerStatus.tsx:21
 #: src/components/farm/FarmerStatus.tsx:22
@@ -799,7 +799,7 @@ msgid "Fee"
 msgstr "Frais"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
-#~ msgid "Fee (TXTX)"
+#~ msgid "Fee (TXFK)"
 #~ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
@@ -1003,16 +1003,16 @@ msgid "Join a Pool"
 msgstr "Rejoindre un pool"
 
 #: src/components/plot/add/PlotAddNFT.tsx:44
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Rejoignez un pool et obtenez des récompenses de culture XTX substantielles. Le rendement moyen est le même, mais il est beaucoup moins volatile."
+msgid "Join a pool and get consistent XFK farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Rejoignez un pool et obtenez des récompenses de culture XFK substantielles. Le rendement moyen est le même, mais il est beaucoup moins volatile."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
-msgid "Join a pool and get consistent XTX farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Rejoignez un pool et obtenez des récompenses de culture XTX substantielles. Le rendement moyen est le même, mais il est beaucoup moins volatile. Affectez des parcelles à une parcelle NFT. Vous pourrez facilement changer de pool sans avoir à re-labourer."
+msgid "Join a pool and get consistent XFK farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Rejoignez un pool et obtenez des récompenses de culture XFK substantielles. Le rendement moyen est le même, mais il est beaucoup moins volatile. Affectez des parcelles à une parcelle NFT. Vous pourrez facilement changer de pool sans avoir à re-labourer."
 
 #: src/components/plot/add/PlotAddNFT.tsx:133
-msgid "Join a pool and get more consistent XTX farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "Rejoignez un pool et obtenez des récompenses de culture XTX substantielles. Créez une parcelle NFT et affectez vos nouvelles parcelles à un groupe."
+msgid "Join a pool and get more consistent XFK farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "Rejoignez un pool et obtenez des récompenses de culture XFK substantielles. Créez une parcelle NFT et affectez vos nouvelles parcelles à un groupe."
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:63
 msgid "K-Size"
@@ -1245,7 +1245,7 @@ msgid "Not found Plots"
 msgstr "Aucune parcelle trouvée"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:184
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XTX reward for pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XFK reward for pooling plots."
 msgstr ""
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:120
@@ -1464,8 +1464,8 @@ msgid "Plots Passed Filter"
 msgstr "Parcelles passées par le filtre"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:35
-msgid "Plots are allocated space on your hard drive used to farm and earn Taco. <0>Learn more</0>"
-msgstr "Les parcelles constituent l'espace alloué sur votre disque dur pour cultiver et gagner du Taco. <0>En savoir plus</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Fork. <0>Learn more</0>"
+msgstr "Les parcelles constituent l'espace alloué sur votre disque dur pour cultiver et gagner du Fork. <0>En savoir plus</0>"
 
 #: src/components/plot/queue/PlotQueueIndicator.tsx:34
 msgid "Plotting"
@@ -1813,7 +1813,7 @@ msgid "Self Pooling"
 msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:105
-msgid "Self pool. When you win a block you will earn XTX rewards."
+msgid "Self pool. When you win a block you will earn XFK rewards."
 msgstr ""
 
 #: src/components/trading/CreateOffer.jsx:164
@@ -1866,7 +1866,7 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Ignorer l'ajout d'un répertoire final au moissonneur pour la culture"
 
 #: src/components/pool/PoolHero.tsx:26
-msgid "Smooth out your XTX farming rewards by joining a pool."
+msgid "Smooth out your XFK farming rewards by joining a pool."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:60
@@ -1951,8 +1951,8 @@ msgstr "Statut:"
 #~ msgstr "Sub Block Height"
 
 #: src/components/block/Block.jsx:338
-#~ msgid "Sub Block at height {0} in the Taco blockchain"
-#~ msgstr "Sub Block at height {0} in the Taco blockchain"
+#~ msgid "Sub Block at height {0} in the Fork blockchain"
+#~ msgstr "Sub Block at height {0} in the Fork blockchain"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:347
 msgid "Submit"
@@ -1979,36 +1979,36 @@ msgstr "Synchronisation <0/>/<1/>"
 #~ msgstr "Syncing {progress}/{tip}"
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:15
-#~ msgid "TXTX Block Rewards"
+#~ msgid "TXFK Block Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardCoinbaseRewards.tsx:12
-#~ msgid "TXTX Farming Rewards"
+#~ msgid "TXFK Farming Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardFeesReward.tsx:12
-#~ msgid "TXTX Fees Collected"
+#~ msgid "TXFK Fees Collected"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:12
-#~ msgid "TXTX User Fees"
-#~ msgstr "TXTX User Fees"
+#~ msgid "TXFK User Fees"
+#~ msgstr "TXFK User Fees"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:15
-#~ msgid "TXTX User Transaction Fees"
+#~ msgid "TXFK User Transaction Fees"
 #~ msgstr ""
 
 #: src/electron/main.tsx:419
-msgid "Taco"
-msgstr "Taco"
+msgid "Fork"
+msgstr "Fork"
 
 #: src/electron/main.tsx:358
-msgid "Taco Blockchain Wiki"
-msgstr "Wiki de la Taco Blockchain"
+msgid "Fork Blockchain Wiki"
+msgstr "Wiki de la Fork Blockchain"
 
 #: src/components/wallet/standard/WalletStandard.tsx:647
-msgid "Taco Wallet"
-msgstr "Portefeuille Taco"
+msgid "Fork Wallet"
+msgstr "Portefeuille Fork"
 
 #: src/components/pool/PoolInfo.tsx:37
 msgid "Target Puzzle Hash"
@@ -2084,7 +2084,7 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Le total des frais de transaction dans ce bloc. Récompenses au fermier."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:87
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XTX address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XFK address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
 msgstr ""
 
 #: src/components/plot/PlotsFailed.tsx:40
@@ -2107,8 +2107,8 @@ msgid "This feature is available only from the GUI."
 msgstr "Cette caractéristique est uniquement disponible via l'interface graphique."
 
 #: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-msgid "This is the amount of Taco that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Taco that you have just spent but is not yet in the blockchain."
-msgstr "Il s'agit du montant de Taco que vous pouvez actuellement utiliser pour effectuer des transactions. Cela n'inclut pas les récompenses de culture et les transactions en attente ainsi que les Taco que vous venez de dépenser et qui ne sont pas encore dans la blockchain."
+msgid "This is the amount of Fork that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Fork that you have just spent but is not yet in the blockchain."
+msgstr "Il s'agit du montant de Fork que vous pouvez actuellement utiliser pour effectuer des transactions. Cela n'inclut pas les récompenses de culture et les transactions en attente ainsi que les Fork que vous venez de dépenser et qui ne sont pas encore dans la blockchain."
 
 #: src/components/wallet/card/WalletCardPendingChange.tsx:26
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -2128,7 +2128,7 @@ msgstr "C'est le moment où le bloc a été créé par le fermier, ce qui se pro
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
 msgid "This is the total amount of fork in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "Il s'agit de la quantité totale de Taco dans la blockchain au plus récent sous-bloc contrôlé par vos clés privées. Il comprend des récompenses de culture gelées, mais pas des transactions entrantes et sortantes."
+msgstr "Il s'agit de la quantité totale de Fork dans la blockchain au plus récent sous-bloc contrôlé par vos clés privées. Il comprend des récompenses de culture gelées, mais pas des transactions entrantes et sortantes."
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
@@ -2173,8 +2173,8 @@ msgid "This trade was included on blockchain at this block height"
 msgstr "Cette transaction a été incluse sur la blockchain à cette hauteur de bloc"
 
 #: src/components/app/AppTimeBombAlert.tsx:19
-msgid "This version of Taco is no longer compatible with the blockchain and can not safely farm."
-msgstr "Cette version de Taco n'est plus compatible avec la blockchain et ne peut pas cultiver de façon sûre."
+msgid "This version of Fork is no longer compatible with the blockchain and can not safely farm."
+msgstr "Cette version de Fork n'est plus compatible avec la blockchain et ne peut pas cultiver de façon sûre."
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"
@@ -2214,8 +2214,8 @@ msgstr "Taille totale des parcelles :"
 msgid "Total Size of Plots"
 msgstr "Taille totale des parcelles"
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:15
-#~ msgid "Total Taco Farmed"
+#: src/components/farm/card/FarmCardTotalForkFarmed.tsx:15
+#~ msgid "Total Fork Farmed"
 #~ msgstr ""
 
 #: src/components/block/Block.jsx:225
@@ -2408,8 +2408,8 @@ msgid "Want to Join a Pool? Create a Plot NFT"
 msgstr ""
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
-msgid "Want to earn more Taco? Add more plots to your farm."
-msgstr "Vous voulez gagner plus de Taco ? Ajoutez plus de parcelles à votre ferme."
+msgid "Want to earn more Fork? Add more plots to your farm."
+msgstr "Vous voulez gagner plus de Fork ? Ajoutez plus de parcelles à votre ferme."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:86
 msgid "Want to have a delay before the next plot starts?"
@@ -2424,8 +2424,8 @@ msgid "Weight is the total added difficulty of all sub blocks up to and includin
 msgstr "Le poids est la difficulté totale de tous les sous-blocs, celui-ci inclus"
 
 #: src/components/selectKey/SelectKey.tsx:112
-msgid "Welcome to Taco. Please log in with an existing key, or create a new key."
-msgstr "Bienvenue sur Taco. Veuillez vous connecter avec une clé existante, ou créer une nouvelle clé."
+msgid "Welcome to Fork. Please log in with an existing key, or create a new key."
+msgstr "Bienvenue sur Fork. Veuillez vous connecter avec une clé existante, ou créer une nouvelle clé."
 
 #: src/components/wallet/WalletAdd.tsx:66
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
@@ -2495,8 +2495,8 @@ msgid "You need to claim your rewards first"
 msgstr ""
 
 #: src/components/app/AppTimeBomb.tsx:28
-#~ msgid "You need to upgrade the Taco application as this version will stop working soon!"
-#~ msgstr "You need to upgrade the Taco application as this version will stop working soon!"
+#~ msgid "You need to upgrade the Fork application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the Fork application as this version will stop working soon!"
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:37
 msgid "You need {currencyCode} to join a pool."
@@ -2583,9 +2583,9 @@ msgstr "{0} points {1} - il y a {2} heures"
 msgid "{currencyCode} Block Rewards"
 msgstr "{currencyCode} récompenses de blocs"
 
-#: src/components/farm/card/FarmCardTotalTacoFarmed.tsx:29
-msgid "{currencyCode} Total Taco Farmed"
-msgstr "{currencyCode} Total de Taco récoltés"
+#: src/components/farm/card/FarmCardTotalForkFarmed.tsx:29
+msgid "{currencyCode} Total Fork Farmed"
+msgstr "{currencyCode} Total de Fork récoltés"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28
 msgid "{currencyCode} User Transaction Fees"

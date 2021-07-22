@@ -4,7 +4,7 @@ from fork.introducer.introducer import Introducer
 from fork.protocols.introducer_protocol import RequestPeersIntroducer, RespondPeersIntroducer
 from fork.protocols.protocol_message_types import ProtocolMessageTypes
 from fork.server.outbound_message import Message, make_msg
-from fork.server.ws_connection import WSTacoConnection
+from fork.server.ws_connection import WSForkConnection
 from fork.types.peer_info import TimestampedPeerInfo
 from fork.util.api_decorators import api_request, peer_required
 from fork.util.ints import uint64
@@ -24,7 +24,7 @@ class IntroducerAPI:
     async def request_peers_introducer(
         self,
         request: RequestPeersIntroducer,
-        peer: WSTacoConnection,
+        peer: WSForkConnection,
     ) -> Optional[Message]:
         max_peers = self.introducer.max_peers_to_send
         if self.introducer.server is None or self.introducer.server.introducer_peers is None:

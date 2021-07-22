@@ -59,7 +59,7 @@ from fork.wallet.wallet_puzzle_store import WalletPuzzleStore
 from fork.wallet.wallet_sync_store import WalletSyncStore
 from fork.wallet.wallet_transaction_store import WalletTransactionStore
 from fork.wallet.wallet_user_store import WalletUserStore
-from fork.server.server import TacoServer
+from fork.server.server import ForkServer
 from fork.wallet.did_wallet.did_wallet import DIDWallet
 
 
@@ -107,7 +107,7 @@ class WalletStateManager:
     interested_store: WalletInterestedStore
     pool_store: WalletPoolStore
     weight_proof_handler: Any
-    server: TacoServer
+    server: ForkServer
     root_path: Path
 
     @staticmethod
@@ -116,7 +116,7 @@ class WalletStateManager:
         config: Dict,
         db_path: Path,
         constants: ConsensusConstants,
-        server: TacoServer,
+        server: ForkServer,
         root_path: Path,
         name: str = None,
     ):

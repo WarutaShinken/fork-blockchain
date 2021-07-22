@@ -334,7 +334,7 @@ export default function Block() {
         title={
           <BlockTitle>
             <Trans>
-              Block at height {blockRecord.height} in the Taco blockchain
+              Block at height {blockRecord.height} in the Fork blockchain
             </Trans>
           </BlockTitle>
         }

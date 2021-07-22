@@ -1,6 +1,6 @@
 [submodule "fork-blockchain-gui"]
 	path = fork-blockchain-gui
-	url = https://github.com/Taco-Network/fork-blockchain-gui.git
+	url = https://github.com/Fork-Network/fork-blockchain-gui.git
 	branch = pools
 [submodule "mozilla-ca"]
 	path = mozilla-ca

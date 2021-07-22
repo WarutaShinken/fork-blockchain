@@ -43,7 +43,7 @@ export default function LocaleToggle(props: Props) {
     handleClose();
 
     openExternal(
-      'https://github.com/Taco-Network/fork-blockchain-gui/tree/main/src/locales/README.md',
+      'https://github.com/Fork-Network/fork-blockchain-gui/tree/main/src/locales/README.md',
     );
   }
 

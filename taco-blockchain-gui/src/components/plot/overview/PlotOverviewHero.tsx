@@ -34,11 +34,11 @@ export default function PlotOverviewHero() {
           <Typography variant="body1">
             <Trans>
               {
-                'Plots are allocated space on your hard drive used to farm and earn Taco. '
+                'Plots are allocated space on your hard drive used to farm and earn Fork. '
               }
               <Link
                 target="_blank"
-                href="https://github.com/Taco-Network/fork-blockchain/wiki/Network-Architecture"
+                href="https://github.com/Fork-Network/fork-blockchain/wiki/Network-Architecture"
               >
                 Learn more
               </Link>

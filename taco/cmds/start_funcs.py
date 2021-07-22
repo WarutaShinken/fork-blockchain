@@ -11,7 +11,7 @@ from fork.util.service_groups import services_for_groups
 
 
 def launch_start_daemon(root_path: Path) -> subprocess.Popen:
-    os.environ["TACO_ROOT"] = str(root_path)
+    os.environ["FORK_ROOT"] = str(root_path)
     # TODO: use startupinfo=subprocess.DETACHED_PROCESS on windows
     fork = sys.argv[0]
     process = subprocess.Popen(f"{fork} run_daemon".split(), stdout=subprocess.PIPE)
