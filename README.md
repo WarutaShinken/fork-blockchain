@@ -4,7 +4,7 @@ Discord Channel: https://discord.gg/xguteVCYHh
 
 Website: https://forknetwork.net (coming soon)
 
-Introducer: dns-introducer.forknetwork.net:18620
+Introducer: dns-introducer.forkcoin.net:3675
 
 Changelog:
 v1.0.0 - Initial Release

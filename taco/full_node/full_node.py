@@ -185,9 +185,9 @@ class FullNode:
             default_port = None
         if "dns_servers" in self.config:
             dns_servers = self.config["dns_servers"]
-        elif self.config["port"] == 18620:
+        elif self.config["port"] == 3675:
             # If `dns_servers` misses from the `config`, hardcode it if we're running mainnet.
-            dns_servers.append("dns-introducer.forknetwork.net")
+            dns_servers.append("dns-introducer.forkcoin.net")
         try:
             self.full_node_peers = FullNodePeers(
                 self.server,
