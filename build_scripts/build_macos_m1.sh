@@ -36,16 +36,16 @@ pip install ..
 cd ../..
 
 echo "Create executables with pyinstaller"
-SPEC_FILE=$(python -c 'import taco; print(taco.PYINSTALLER_SPEC_PATH)')
+SPEC_FILE=$(python -c 'import fork; print(fork.PYINSTALLER_SPEC_PATH)')
 pyinstaller --log-level=INFO "$SPEC_FILE"
 LAST_EXIT_CODE=$?
 if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 	echo >&2 "pyinstaller failed!"
 	exit $LAST_EXIT_CODE
 fi
-cp -r dist/daemon ../taco-blockchain-gui
+cp -r dist/daemon ../fork-blockchain-gui
 cd .. || exit
-cd taco-blockchain-gui || exit
+cd fork-blockchain-gui || exit
 
 echo "npm build"
 npm install
@@ -58,7 +58,7 @@ if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 fi
 
 electron-packager . Taco --asar.unpack="**/daemon/**" --platform=darwin \
---icon=src/assets/img/Taco.icns --overwrite --app-bundle-id=net.taco.blockchain \
+--icon=src/assets/img/Taco.icns --overwrite --app-bundle-id=net.fork.blockchain \
 --appVersion=$TACO_INSTALLER_VERSION
 LAST_EXIT_CODE=$?
 if [ "$LAST_EXIT_CODE" -ne 0 ]; then
@@ -68,7 +68,7 @@ fi
 
 if [ "$NOTARIZE" ]; then
   electron-osx-sign Taco-darwin-arm64/Taco.app --platform=darwin \
-  --hardened-runtime=true --provisioning-profile=tacoblockchain.provisionprofile \
+  --hardened-runtime=true --provisioning-profile=forkblockchain.provisionprofile \
   --entitlements=entitlements.mac.plist --entitlements-inherit=entitlements.mac.plist \
   --no-gatekeeper-assess
 fi
@@ -97,7 +97,7 @@ ls -lh final_installer
 if [ "$NOTARIZE" ]; then
 	echo "Notarize $DMG_NAME on ci"
 	cd final_installer || exit
-  notarize-cli --file=$DMG_NAME --bundle-id net.taco.blockchain \
+  notarize-cli --file=$DMG_NAME --bundle-id net.fork.blockchain \
 	--username "$APPLE_NOTARIZE_USERNAME" --password "$APPLE_NOTARIZE_PASSWORD"
   echo "Notarization step complete"
 else
@@ -108,7 +108,7 @@ fi
 #
 # Ask for username and password. password should be an app specific password.
 # Generate app specific password https://support.apple.com/en-us/HT204397
-# xcrun altool --notarize-app -f Taco-0.1.X.dmg --primary-bundle-id net.taco.blockchain -u username -p password
+# xcrun altool --notarize-app -f Taco-0.1.X.dmg --primary-bundle-id net.fork.blockchain -u username -p password
 # xcrun altool --notarize-app; -should return REQUEST-ID, use it in next command
 #
 # Wait until following command return a success message".

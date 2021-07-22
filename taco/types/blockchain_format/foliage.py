@@ -3,11 +3,11 @@ from typing import List, Optional
 
 from blspy import G2Element
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.pool_target import PoolTarget
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.ints import uint64
-from taco.util.streamable import Streamable, streamable
+from fork.types.blockchain_format.coin import Coin
+from fork.types.blockchain_format.pool_target import PoolTarget
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.util.ints import uint64
+from fork.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

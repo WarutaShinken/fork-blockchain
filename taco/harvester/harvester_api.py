@@ -5,20 +5,20 @@ from typing import Callable, List, Tuple
 
 from blspy import AugSchemeMPL, G2Element, G1Element
 
-from taco.consensus.pot_iterations import calculate_iterations_quality, calculate_sp_interval_iters
-from taco.harvester.harvester import Harvester
-from taco.plotting.plot_tools import PlotInfo, parse_plot_info
-from taco.protocols import harvester_protocol
-from taco.protocols.farmer_protocol import FarmingInfo
-from taco.protocols.harvester_protocol import Plot
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.server.outbound_message import make_msg
-from taco.server.ws_connection import WSTacoConnection
-from taco.types.blockchain_format.proof_of_space import ProofOfSpace
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.api_decorators import api_request, peer_required
-from taco.util.ints import uint8, uint32, uint64
-from taco.wallet.derive_keys import master_sk_to_local_sk
+from fork.consensus.pot_iterations import calculate_iterations_quality, calculate_sp_interval_iters
+from fork.harvester.harvester import Harvester
+from fork.plotting.plot_tools import PlotInfo, parse_plot_info
+from fork.protocols import harvester_protocol
+from fork.protocols.farmer_protocol import FarmingInfo
+from fork.protocols.harvester_protocol import Plot
+from fork.protocols.protocol_message_types import ProtocolMessageTypes
+from fork.server.outbound_message import make_msg
+from fork.server.ws_connection import WSTacoConnection
+from fork.types.blockchain_format.proof_of_space import ProofOfSpace
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.util.api_decorators import api_request, peer_required
+from fork.util.ints import uint8, uint32, uint64
+from fork.wallet.derive_keys import master_sk_to_local_sk
 
 
 class HarvesterAPI:

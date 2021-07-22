@@ -2,13 +2,13 @@ from typing import List
 
 from blspy import AugSchemeMPL, G1Element, G2Element
 
-from taco.consensus.coinbase import create_puzzlehash_for_pk
-from taco.util.bech32m import encode_puzzle_hash
-from taco.util.config import load_config
-from taco.util.default_root import DEFAULT_ROOT_PATH
-from taco.util.ints import uint32
-from taco.util.keychain import Keychain, bytes_to_mnemonic, generate_mnemonic
-from taco.wallet.derive_keys import master_sk_to_farmer_sk, master_sk_to_pool_sk, master_sk_to_wallet_sk
+from fork.consensus.coinbase import create_puzzlehash_for_pk
+from fork.util.bech32m import encode_puzzle_hash
+from fork.util.config import load_config
+from fork.util.default_root import DEFAULT_ROOT_PATH
+from fork.util.ints import uint32
+from fork.util.keychain import Keychain, bytes_to_mnemonic, generate_mnemonic
+from fork.wallet.derive_keys import master_sk_to_farmer_sk, master_sk_to_pool_sk, master_sk_to_wallet_sk
 
 keychain: Keychain = Keychain()
 
@@ -21,7 +21,7 @@ def generate_and_print():
     mnemonic = generate_mnemonic()
     print("Generating private key. Mnemonic (24 secret words):")
     print(mnemonic)
-    print("Note that this key has not been added to the keychain. Run taco keys add")
+    print("Note that this key has not been added to the keychain. Run fork keys add")
     return mnemonic
 
 

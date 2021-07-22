@@ -4,7 +4,7 @@ export NODE_OPTIONS="--max-old-space-size=3000"
 
 
 if [ -z "$VIRTUAL_ENV" ]; then
-  echo "This requires the taco python virtual environment."
+  echo "This requires the fork python virtual environment."
   echo "Execute '. ./activate' before running."
 	exit 1
 fi
@@ -14,7 +14,7 @@ if [ "$(id -u)" = 0 ]; then
 	exit 1
 fi
 
-# Allows overriding the branch or commit to build in taco-blockchain-gui
+# Allows overriding the branch or commit to build in fork-blockchain-gui
 SUBMODULE_BRANCH=$1
 
 UBUNTU=false
@@ -80,7 +80,7 @@ if [ ! "$CI" ]; then
 	echo "Running git submodule update."
 	echo ""
 	git submodule update
-	cd taco-blockchain-gui
+	cd fork-blockchain-gui
 
 	if [ "$SUBMODULE_BRANCH" ];
 	then
@@ -102,4 +102,4 @@ fi
 echo ""
 echo "Taco blockchain install-gui.sh completed."
 echo ""
-echo "Type 'cd taco-blockchain-gui' and then 'npm run electron &' to start the GUI."
+echo "Type 'cd fork-blockchain-gui' and then 'npm run electron &' to start the GUI."

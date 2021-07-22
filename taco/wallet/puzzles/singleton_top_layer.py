@@ -1,14 +1,14 @@
 from typing import List, Tuple
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.coin_solution import CoinSolution
-from taco.wallet.puzzles.load_clvm import load_clvm
-from taco.wallet.lineage_proof import LineageProof
-from taco.util.ints import uint64
-from taco.util.hash import std_hash
+from fork.types.blockchain_format.coin import Coin
+from fork.types.blockchain_format.program import Program
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.types.condition_opcodes import ConditionOpcode
+from fork.types.coin_solution import CoinSolution
+from fork.wallet.puzzles.load_clvm import load_clvm
+from fork.wallet.lineage_proof import LineageProof
+from fork.util.ints import uint64
+from fork.util.hash import std_hash
 
 SINGLETON_MOD = load_clvm("singleton_top_layer.clvm")
 SINGLETON_MOD_HASH = SINGLETON_MOD.get_tree_hash()

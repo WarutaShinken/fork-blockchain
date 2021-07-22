@@ -5,10 +5,10 @@ from typing import List
 
 from blspy import G1Element
 
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.config import load_config, save_config
-from taco.util.streamable import Streamable, streamable
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.util.byte_types import hexstr_to_bytes
+from fork.util.config import load_config, save_config
+from fork.util.streamable import Streamable, streamable
 
 """
 Config example

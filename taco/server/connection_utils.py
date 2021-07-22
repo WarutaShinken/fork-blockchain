@@ -2,7 +2,7 @@ import asyncio
 import random
 from typing import Any, List, Optional, Tuple
 
-from taco.server.ws_connection import WSTacoConnection
+from fork.server.ws_connection import WSTacoConnection
 
 
 async def send_all_first_reply(

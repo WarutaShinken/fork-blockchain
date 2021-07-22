@@ -2,10 +2,10 @@ import asyncio
 
 import pytest
 
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-from taco.types.peer_info import PeerInfo
-from taco.util.ints import uint16, uint64
-from taco.wallet.rl_wallet.rl_wallet import RLWallet
+from fork.simulator.simulator_protocol import FarmNewBlockProtocol
+from fork.types.peer_info import PeerInfo
+from fork.util.ints import uint16, uint64
+from fork.wallet.rl_wallet.rl_wallet import RLWallet
 from tests.setup_nodes import self_hostname, setup_simulators_and_wallets
 from tests.time_out_assert import time_out_assert
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { Button, ConfirmDialog, Flex, Logo } from '@taco/core';
+import { Button, ConfirmDialog, Flex, Logo } from '@fork/core';
 import {
   Card,
   Typography,

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box, BoxProps } from '@material-ui/core';
-import { Taco } from '@taco/icons';
+import { Taco } from '@fork/icons';
 
 const StyledTaco = styled(Taco)`
   max-width: 100%;

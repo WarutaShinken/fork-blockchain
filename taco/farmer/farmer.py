@@ -9,12 +9,12 @@ import traceback
 import aiohttp
 from blspy import AugSchemeMPL, G1Element, G2Element, PrivateKey
 
-import taco.server.ws_connection as ws  # lgtm [py/import-and-import-from]
-from taco.consensus.coinbase import create_puzzlehash_for_pk
-from taco.consensus.constants import ConsensusConstants
-from taco.pools.pool_config import PoolWalletConfig, load_pool_config
-from taco.protocols import farmer_protocol, harvester_protocol
-from taco.protocols.pool_protocol import (
+import fork.server.ws_connection as ws  # lgtm [py/import-and-import-from]
+from fork.consensus.coinbase import create_puzzlehash_for_pk
+from fork.consensus.constants import ConsensusConstants
+from fork.pools.pool_config import PoolWalletConfig, load_pool_config
+from fork.protocols import farmer_protocol, harvester_protocol
+from fork.protocols.pool_protocol import (
     ErrorResponse,
     get_current_authentication_token,
     GetFarmerResponse,
@@ -25,24 +25,24 @@ from taco.protocols.pool_protocol import (
     PutFarmerRequest,
     AuthenticationPayload,
 )
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.server.outbound_message import NodeType, make_msg
-from taco.server.ws_connection import WSTacoConnection
-from taco.types.blockchain_format.proof_of_space import ProofOfSpace
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.bech32m import decode_puzzle_hash
-from taco.util.config import load_config, save_config, config_path_for_filename
-from taco.util.hash import std_hash
-from taco.util.ints import uint8, uint16, uint32, uint64
-from taco.util.keychain import Keychain
-from taco.wallet.derive_keys import (
+from fork.protocols.protocol_message_types import ProtocolMessageTypes
+from fork.server.outbound_message import NodeType, make_msg
+from fork.server.ws_connection import WSTacoConnection
+from fork.types.blockchain_format.proof_of_space import ProofOfSpace
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.util.bech32m import decode_puzzle_hash
+from fork.util.config import load_config, save_config, config_path_for_filename
+from fork.util.hash import std_hash
+from fork.util.ints import uint8, uint16, uint32, uint64
+from fork.util.keychain import Keychain
+from fork.wallet.derive_keys import (
     master_sk_to_farmer_sk,
     master_sk_to_pool_sk,
     master_sk_to_wallet_sk,
     find_authentication_sk,
     find_owner_sk,
 )
-from taco.wallet.puzzles.singleton_top_layer import SINGLETON_MOD
+from fork.wallet.puzzles.singleton_top_layer import SINGLETON_MOD
 
 singleton_mod_hash = SINGLETON_MOD.get_tree_hash()
 
@@ -115,7 +115,7 @@ class Farmer:
         ]
 
         if len(self.get_public_keys()) == 0:
-            error_str = "No keys exist. Please run 'taco keys generate' or open the UI."
+            error_str = "No keys exist. Please run 'fork keys generate' or open the UI."
             raise RuntimeError(error_str)
 
         # This is the farmer configuration
@@ -134,7 +134,7 @@ class Farmer:
         assert len(self.farmer_target) == 32
         assert len(self.pool_target) == 32
         if len(self.pool_sks_map) == 0:
-            error_str = "No keys exist. Please run 'taco keys generate' or open the UI."
+            error_str = "No keys exist. Please run 'fork keys generate' or open the UI."
             raise RuntimeError(error_str)
 
         # The variables below are for use with an actual pool

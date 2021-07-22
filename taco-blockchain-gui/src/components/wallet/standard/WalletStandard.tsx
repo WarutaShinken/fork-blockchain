@@ -11,7 +11,7 @@ import {
   Flex,
   Card,
   ConfirmDialog,
-} from '@taco/core';
+} from '@fork/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import isNumeric from 'validator/es/lib/isNumeric';
@@ -42,7 +42,7 @@ import {
   send_transaction,
   farm_block,
 } from '../../../modules/message';
-import { /* mojo_to_taco_string, */ taco_to_mojo } from '../../../util/taco';
+import { /* mojo_to_fork_string, */ fork_to_mojo } from '../../../util/fork';
 import { openDialog } from '../../../modules/dialog';
 import { get_transaction_result } from '../../../util/transaction_result';
 import config from '../../../config/config';
@@ -238,7 +238,7 @@ function BalanceCardSubSection(props: BalanceCardSubSectionProps) {
         </Box>
         <Box>
           <Typography variant="subtitle1">
-            {mojo_to_taco_string(props.balance)} {currencyCode}
+            {mojo_to_fork_string(props.balance)} {currencyCode}
           </Typography>
         </Box>
       </Box>
@@ -273,7 +273,7 @@ function BalanceCard(props: BalanceCardProps) {
         balance={balance}
         tooltip={
           <Trans>
-            This is the total amount of taco in the blockchain at the current
+            This is the total amount of fork in the blockchain at the current
             peak sub block that is controlled by your private keys. It includes
             frozen farming rewards, but not pending incoming and outgoing
             transactions.
@@ -454,7 +454,7 @@ function SendCard(props: SendCardProps) {
         openDialog(
           <AlertDialog>
             <Trans>
-              Error: Cannot send taco to coloured address. Please enter a taco
+              Error: Cannot send fork to coloured address. Please enter a fork
               address.
             </Trans>
           </AlertDialog>,
@@ -463,15 +463,15 @@ function SendCard(props: SendCardProps) {
       return;
     }
 
-    if (address.slice(0, 12) === 'taco_addr://') {
+    if (address.slice(0, 12) === 'fork_addr://') {
       address = address.slice(12);
     }
     if (address.startsWith('0x') || address.startsWith('0X')) {
       address = address.slice(2);
     }
 
-    const amountValue = Number.parseFloat(taco_to_mojo(amount));
-    const feeValue = Number.parseFloat(taco_to_mojo(fee));
+    const amountValue = Number.parseFloat(fork_to_mojo(amount));
+    const feeValue = Number.parseFloat(fork_to_mojo(fee));
 
     dispatch(send_transaction(wallet_id, amountValue, feeValue, address));
 

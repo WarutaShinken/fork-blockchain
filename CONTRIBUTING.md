@@ -1,13 +1,13 @@
 # Introduction
 
-Welcome to the taco-blockchain project!
+Welcome to the fork-blockchain project!
 We are happy that you are taking a look at the code for Taco, a proof of space and time cryptocurrency.
 
 A lot of fascinating new cryptography and blockchain concepts are used and implemented here.
-This repo includes the code for the Taco full node, farmer, and timelord (in taco folder), which are all written in python.
-It also includes a verifiable delay function implementation that it imports from the [chiavdf repo](https://github.com/Taco-Network/chiavdf) (in c/c++), and a proof of space implementation that it imports from the [chiapos repo](https://github.com/Taco-Network/chiapos). BLS signatures are imported from the [bls-signatures repo](https://github.com/Taco-Network/bls-signatures) as blspy. There is an additional dependency on the [chiabip158 repo](https://github.com/Taco-Network/chiabip158). For major platforms, binary and source wheels are shipped to PyPI from each dependent repo. Then taco-blockchain can pip install those from PyPI or they can be prepackaged as is done for the Windows installer. On unsupported platforms, pip will fall back to the source distributions, to be compiled locally.
+This repo includes the code for the Taco full node, farmer, and timelord (in fork folder), which are all written in python.
+It also includes a verifiable delay function implementation that it imports from the [chiavdf repo](https://github.com/Taco-Network/chiavdf) (in c/c++), and a proof of space implementation that it imports from the [chiapos repo](https://github.com/Taco-Network/chiapos). BLS signatures are imported from the [bls-signatures repo](https://github.com/Taco-Network/bls-signatures) as blspy. There is an additional dependency on the [chiabip158 repo](https://github.com/Taco-Network/chiabip158). For major platforms, binary and source wheels are shipped to PyPI from each dependent repo. Then fork-blockchain can pip install those from PyPI or they can be prepackaged as is done for the Windows installer. On unsupported platforms, pip will fall back to the source distributions, to be compiled locally.
 
-If you want to learn more about this project, read the [wiki](https://github.com/Taco-Network/taco-blockchain/wiki), or check out the [green paper](https://www.taconetwork.net/assets/TacoGreenPaper.pdf).
+If you want to learn more about this project, read the [wiki](https://github.com/Taco-Network/fork-blockchain/wiki), or check out the [green paper](https://www.forknetwork.net/assets/TacoGreenPaper.pdf).
 
 ## Contributions
 
@@ -19,7 +19,7 @@ You can visit our [Trello project board](https://trello.com/b/ZuNx7sET) to get a
 Generally, things to the left are in progress or done. Some things go through "Coming up soon", but some will come directly out of other columns.
 Usually, the things closer to the top of each column are the ones that will be worked on soonest.
 If you are interested in cryptography, math, or just like hacking in python, there are many interesting problems to work on.
-Contact any of the team members on [Keybase](https://keybase.io/team/taco_network.public), which we use as the main communication method. You can also comment on any Trello card.
+Contact any of the team members on [Keybase](https://keybase.io/team/fork_network.public), which we use as the main communication method. You can also comment on any Trello card.
 
 We ask that external contributors create a fork of the `main` branch for any feature work they wish to take on.
 
@@ -51,7 +51,7 @@ proofs of space during testing. The next time tests are run, this will not be ne
 ```bash
 . ./activate
 pip install ".[dev]"
-black taco tests && mypy taco tests && flake8 taco tests
+black fork tests && mypy fork tests && flake8 fork tests
 py.test tests -v --durations 0
 ```
 
@@ -69,7 +69,7 @@ If you want verbose logging for tests, edit the `tests/pytest.ini` file.
 4. Preferences > Settings > Python > Linting > flake8 enabled
 5. Preferences > Settings > Python > Linting > mypy enabled
 6. Preferences > Settings > Formatting > Python > Provider > black
-7. Preferences > Settings > mypy > Targets: set to `./taco` and `./tests`
+7. Preferences > Settings > mypy > Targets: set to `./fork` and `./tests`
 
 ## Configure Pycharm
 
@@ -82,12 +82,12 @@ workflow.
 3. Install BlackConnect plugin
 4. Set to run python black on save
 5. Set line length to 120
-6. Install these linters https://github.com/Taco-Network/taco-blockchain/tree/main/.github/linters
+6. Install these linters https://github.com/Taco-Network/fork-blockchain/tree/main/.github/linters
 
 ## Testnets and review environments
 
 With the launch of `1.0.0` we will begin running an official `testnet`.  
-Prior to the release of `1.1.0` there will be two running test nets. `testnet` and `transaction-beta-testnet`. The `transaction-beta-testnet` testnet will be a beta of the pending 1.1 release, which will enable transactions on the taco blockchain.
+Prior to the release of `1.1.0` there will be two running test nets. `testnet` and `transaction-beta-testnet`. The `transaction-beta-testnet` testnet will be a beta of the pending 1.1 release, which will enable transactions on the fork blockchain.
 Following the release of `1.1.0`, the official `testnet` will include all changes that have been accepted to the current release branch.
 
 Prior to proposing changes to `main`, proposers should consider if running a `beta testnet` review environment will make the reviewer more effective when evaluating a change.

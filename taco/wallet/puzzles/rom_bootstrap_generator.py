@@ -1,4 +1,4 @@
-from taco.types.blockchain_format.program import SerializedProgram
+from fork.types.blockchain_format.program import SerializedProgram
 
 from .load_clvm import load_clvm
 

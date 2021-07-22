@@ -23,8 +23,8 @@ def private_ssl_ca_paths(path: Path, config: Dict):
     )
 
 
-def taco_ssl_ca_paths(path: Path, config: Dict):
+def fork_ssl_ca_paths(path: Path, config: Dict):
     return (
-        path / config["taco_ssl_ca"]["crt"],
-        path / config["taco_ssl_ca"]["key"],
+        path / config["fork_ssl_ca"]["crt"],
+        path / config["fork_ssl_ca"]["key"],
     )

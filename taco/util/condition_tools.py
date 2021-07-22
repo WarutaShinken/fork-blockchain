@@ -2,15 +2,15 @@ from typing import Dict, List, Optional, Tuple, Set
 
 from blspy import G1Element
 
-from taco.types.announcement import Announcement
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program, SerializedProgram
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.condition_with_args import ConditionWithArgs
-from taco.util.clvm import int_from_bytes
-from taco.util.errors import ConsensusError, Err
-from taco.util.ints import uint64
+from fork.types.announcement import Announcement
+from fork.types.blockchain_format.coin import Coin
+from fork.types.blockchain_format.program import Program, SerializedProgram
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.types.condition_opcodes import ConditionOpcode
+from fork.types.condition_with_args import ConditionWithArgs
+from fork.util.clvm import int_from_bytes
+from fork.util.errors import ConsensusError, Err
+from fork.util.ints import uint64
 
 # TODO: review each `assert` and consider replacing with explicit checks
 #       since asserts can be stripped with python `-OO` flag

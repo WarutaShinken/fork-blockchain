@@ -16,17 +16,17 @@ from typing import Any, Dict, List, Optional, TextIO, Tuple, cast
 
 from websockets import ConnectionClosedOK, WebSocketException, WebSocketServerProtocol, serve
 
-from taco.cmds.init_funcs import taco_init
-from taco.daemon.windows_signal import kill
-from taco.server.server import ssl_context_for_root, ssl_context_for_server
-from taco.ssl.create_ssl import get_mozilla_ca_crt
-from taco.util.taco_logging import initialize_logging
-from taco.util.config import load_config
-from taco.util.json_util import dict_to_json_str
-from taco.util.path import mkdir
-from taco.util.service_groups import validate_service
-from taco.util.setproctitle import setproctitle
-from taco.util.ws_message import WsRpcMessage, create_payload, format_response
+from fork.cmds.init_funcs import fork_init
+from fork.daemon.windows_signal import kill
+from fork.server.server import ssl_context_for_root, ssl_context_for_server
+from fork.ssl.create_ssl import get_mozilla_ca_crt
+from fork.util.fork_logging import initialize_logging
+from fork.util.config import load_config
+from fork.util.json_util import dict_to_json_str
+from fork.util.path import mkdir
+from fork.util.service_groups import validate_service
+from fork.util.setproctitle import setproctitle
+from fork.util.ws_message import WsRpcMessage, create_payload, format_response
 
 io_pool_exc = ThreadPoolExecutor()
 
@@ -45,7 +45,7 @@ except ImportError:
 
 log = logging.getLogger(__name__)
 
-service_plotter = "taco plots create"
+service_plotter = "fork plots create"
 
 
 async def fetch(url: str):
@@ -78,15 +78,15 @@ class PlotEvent(str, Enum):
 # determine if application is a script file or frozen exe
 if getattr(sys, "frozen", False):
     name_map = {
-        "taco": "taco",
-        "taco_wallet": "start_wallet",
-        "taco_full_node": "start_full_node",
-        "taco_harvester": "start_harvester",
-        "taco_farmer": "start_farmer",
-        "taco_introducer": "start_introducer",
-        "taco_timelord": "start_timelord",
-        "taco_timelord_launcher": "timelord_launcher",
-        "taco_full_node_simulator": "start_simulator",
+        "fork": "fork",
+        "fork_wallet": "start_wallet",
+        "fork_full_node": "start_full_node",
+        "fork_harvester": "start_harvester",
+        "fork_farmer": "start_farmer",
+        "fork_introducer": "start_introducer",
+        "fork_timelord": "start_timelord",
+        "fork_timelord_launcher": "timelord_launcher",
+        "fork_full_node_simulator": "start_simulator",
     }
 
     def executable_for_service(service_name: str) -> str:
@@ -692,7 +692,7 @@ class WebSocketServer:
 
         # TODO: fix this hack
         asyncio.get_event_loop().call_later(5, lambda *args: sys.exit(0))
-        log.info("taco daemon exiting in 5 seconds")
+        log.info("fork daemon exiting in 5 seconds")
 
         response = {"success": True}
         return response
@@ -975,9 +975,9 @@ def singleton(lockfile: Path, text: str = "semaphore") -> Optional[TextIO]:
 
 
 async def async_run_daemon(root_path: Path) -> int:
-    taco_init(root_path)
+    fork_init(root_path)
     config = load_config(root_path, "config.yaml")
-    setproctitle("taco_daemon")
+    setproctitle("fork_daemon")
     initialize_logging("daemon", config["logging"], root_path)
     lockfile = singleton(daemon_launch_lock_path(root_path))
     crt_path = root_path / config["daemon_ssl"]["private_crt"]
@@ -1015,7 +1015,7 @@ def run_daemon(root_path: Path) -> int:
 
 
 def main() -> int:
-    from taco.util.default_root import DEFAULT_ROOT_PATH
+    from fork.util.default_root import DEFAULT_ROOT_PATH
 
     return run_daemon(DEFAULT_ROOT_PATH)
 

@@ -7,14 +7,14 @@ from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes, serialization
 
-from taco.protocols.shared_protocol import protocol_version
-from taco.server.outbound_message import NodeType
-from taco.server.server import TacoServer, ssl_context_for_client
-from taco.server.ws_connection import WSTacoConnection
-from taco.ssl.create_ssl import generate_ca_signed_cert
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.peer_info import PeerInfo
-from taco.util.ints import uint16
+from fork.protocols.shared_protocol import protocol_version
+from fork.server.outbound_message import NodeType
+from fork.server.server import TacoServer, ssl_context_for_client
+from fork.server.ws_connection import WSTacoConnection
+from fork.ssl.create_ssl import generate_ca_signed_cert
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.types.peer_info import PeerInfo
+from fork.util.ints import uint16
 from tests.setup_nodes import self_hostname
 from tests.time_out_assert import time_out_assert
 
@@ -35,10 +35,10 @@ async def add_dummy_connection(server: TacoServer, dummy_port: int) -> Tuple[asy
     dummy_crt_path = server._private_key_path.parent / "dummy.crt"
     dummy_key_path = server._private_key_path.parent / "dummy.key"
     generate_ca_signed_cert(
-        server.taco_ca_crt_path.read_bytes(), server.taco_ca_key_path.read_bytes(), dummy_crt_path, dummy_key_path
+        server.fork_ca_crt_path.read_bytes(), server.fork_ca_key_path.read_bytes(), dummy_crt_path, dummy_key_path
     )
     ssl_context = ssl_context_for_client(
-        server.taco_ca_crt_path, server.taco_ca_key_path, dummy_crt_path, dummy_key_path
+        server.fork_ca_crt_path, server.fork_ca_key_path, dummy_crt_path, dummy_key_path
     )
     pem_cert = x509.load_pem_x509_certificate(dummy_crt_path.read_bytes(), default_backend())
     der_cert = x509.load_der_x509_certificate(pem_cert.public_bytes(serialization.Encoding.DER), default_backend())

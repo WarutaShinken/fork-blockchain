@@ -1,7 +1,7 @@
 from typing import Dict, List, Optional, Any
 
-from taco.rpc.rpc_client import RpcClient
-from taco.types.blockchain_format.sized_bytes import bytes32
+from fork.rpc.rpc_client import RpcClient
+from fork.types.blockchain_format.sized_bytes import bytes32
 
 
 class FarmerRpcClient(RpcClient):

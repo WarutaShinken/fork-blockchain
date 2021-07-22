@@ -4,10 +4,10 @@
 # from secrets import token_bytes
 # import aiosqlite
 # import pytest
-# from taco.util.ints import uint32, uint64, uint128
-# from taco.wallet.wallet_coin_record import WalletCoinRecord
-# from taco.wallet.util.wallet_types import WalletType
-# from taco.types.coin import Coin
+# from fork.util.ints import uint32, uint64, uint128
+# from fork.wallet.wallet_coin_record import WalletCoinRecord
+# from fork.wallet.util.wallet_types import WalletType
+# from fork.types.coin import Coin
 #
 #
 # @pytest.fixture(scope="module")

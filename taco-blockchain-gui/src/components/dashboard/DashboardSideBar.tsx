@@ -10,8 +10,8 @@ import {
   Home as HomeIcon,
   Plot as PlotIcon,
   Pool as PoolIcon,
-} from '@taco/icons';
-import { Flex, SideBarItem } from '@taco/core';
+} from '@fork/icons';
+import { Flex, SideBarItem } from '@fork/core';
 import { logOut } from '../../modules/message';
 
 const StyledRoot = styled(Flex)`

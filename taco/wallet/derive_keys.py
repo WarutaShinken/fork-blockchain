@@ -2,7 +2,7 @@ from typing import List, Optional
 
 from blspy import AugSchemeMPL, PrivateKey, G1Element
 
-from taco.util.ints import uint32
+from fork.util.ints import uint32
 
 # EIP 2334 bls key derivation
 # https://eips.ethereum.org/EIPS/eip-2334

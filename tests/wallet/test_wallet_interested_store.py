@@ -4,11 +4,11 @@ from secrets import token_bytes
 import aiosqlite
 import pytest
 
-from taco.types.blockchain_format.coin import Coin
-from taco.util.db_wrapper import DBWrapper
-from taco.util.ints import uint64
+from fork.types.blockchain_format.coin import Coin
+from fork.util.db_wrapper import DBWrapper
+from fork.util.ints import uint64
 
-from taco.wallet.wallet_interested_store import WalletInterestedStore
+from fork.wallet.wallet_interested_store import WalletInterestedStore
 
 
 @pytest.fixture(scope="module")

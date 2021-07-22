@@ -1,22 +1,22 @@
 import logging
 from typing import Optional, Union
 
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.blockchain_interface import BlockchainInterface
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.deficit import calculate_deficit
-from taco.consensus.difficulty_adjustment import (
+from fork.consensus.block_record import BlockRecord
+from fork.consensus.blockchain_interface import BlockchainInterface
+from fork.consensus.constants import ConsensusConstants
+from fork.consensus.deficit import calculate_deficit
+from fork.consensus.difficulty_adjustment import (
     _get_next_difficulty,
     _get_next_sub_slot_iters,
     can_finish_sub_and_full_epoch,
     get_next_sub_slot_iters_and_difficulty,
     height_can_be_first_in_epoch,
 )
-from taco.consensus.pot_iterations import calculate_ip_iters, calculate_sp_iters, is_overflow_block
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.types.full_block import FullBlock
-from taco.types.unfinished_block import UnfinishedBlock
-from taco.util.ints import uint8, uint32, uint64, uint128
+from fork.consensus.pot_iterations import calculate_ip_iters, calculate_sp_iters, is_overflow_block
+from fork.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from fork.types.full_block import FullBlock
+from fork.types.unfinished_block import UnfinishedBlock
+from fork.util.ints import uint8, uint32, uint64, uint128
 
 log = logging.getLogger(__name__)
 

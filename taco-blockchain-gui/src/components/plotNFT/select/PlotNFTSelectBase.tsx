@@ -12,7 +12,7 @@ import {
   RadioGroup,
   Fee,
   TextField,
-} from '@taco/core';
+} from '@fork/core';
 import {
   Grid,
   FormControl,

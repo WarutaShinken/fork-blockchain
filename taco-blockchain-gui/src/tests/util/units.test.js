@@ -2,8 +2,8 @@ const units = require('../../util/units');
 
 describe('units', () => {
   describe('#getUnit', () => {
-    it('gets unit of taco', () => {
-      const result = units.getUnit('taco');
+    it('gets unit of fork', () => {
+      const result = units.getUnit('fork');
 
       expect(result).toBe(1);
     });
@@ -22,7 +22,7 @@ describe('units', () => {
 
       expect(result).toBe(1);
     });
-    it('gets unit of taco using alias', () => {
+    it('gets unit of fork using alias', () => {
       const result = units.getUnit('ch');
 
       expect(result).toBe(1);
@@ -46,8 +46,8 @@ describe('units', () => {
     });
   });
   describe('#getDisplay', () => {
-    it('gets display of taco', () => {
-      const result = units.getDisplay('taco');
+    it('gets display of fork', () => {
+      const result = units.getDisplay('fork');
 
       expect(result).toEqual({
         format: '{amount} CH',
@@ -87,13 +87,13 @@ describe('units', () => {
       expect(result).toEqual(1);
     });
     it('modifies an existing unit', () => {
-      units.setUnit('taco', 9);
+      units.setUnit('fork', 9);
 
-      const result = units.getUnit('taco');
+      const result = units.getUnit('fork');
 
       expect(result).toEqual(9);
 
-      units.setUnit('taco', 1);
+      units.setUnit('fork', 1);
     });
   });
   describe('#setDisplay', () => {
@@ -111,12 +111,12 @@ describe('units', () => {
       });
     });
     it('updates an existing display', () => {
-      units.setDisplay('taco', {
+      units.setDisplay('fork', {
         format: '{amount} TXTX',
         fractionDigits: 0,
       });
 
-      const result = units.getDisplay('taco');
+      const result = units.getDisplay('fork');
 
       expect(result).toEqual({
         format: '{amount} TXTX',

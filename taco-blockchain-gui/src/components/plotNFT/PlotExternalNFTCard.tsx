@@ -11,7 +11,7 @@ import {
   Loading,
   FormatLargeNumber,
   Link,
-} from '@taco/core';
+} from '@fork/core';
 import {
   Box,
   Card,

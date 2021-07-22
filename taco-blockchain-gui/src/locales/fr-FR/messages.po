@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: fr_FR\n"
-"Project-Id-Version: taco-blockchain\n"
+"Project-Id-Version: fork-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-07-07 11:47\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Crowdin-Project: taco-blockchain\n"
+"X-Crowdin-Project: fork-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: fr\n"
-"X-Crowdin-File: /[Taco-Network.taco-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Taco-Network.fork-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -688,8 +688,8 @@ msgid "Error"
 msgstr "Erreur"
 
 #: src/components/wallet/standard/WalletStandard.tsx:456
-msgid "Error: Cannot send taco to coloured address. Please enter a taco address."
-msgstr "Erreur: Impossible d'envoyer du taco à une adresse colorée. Merci d'entrer une adresse taco valide."
+msgid "Error: Cannot send fork to coloured address. Please enter a fork address."
+msgstr "Erreur: Impossible d'envoyer du fork à une adresse colorée. Merci d'entrer une adresse fork valide."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
 msgid "Estimated Network Space"
@@ -1902,8 +1902,8 @@ msgstr "Intervalle de dépense (nombre de blocs)"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (taco per interval): {0}"
-msgstr "Limite de dépense (taco par intervalle): {0}"
+msgid "Spending Limit (fork per interval): {0}"
+msgstr "Limite de dépense (fork par intervalle): {0}"
 
 #: src/components/fullNode/FullNode.jsx:100
 msgid "State"
@@ -2127,7 +2127,7 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr "C'est le moment où le bloc a été créé par le fermier, ce qui se produit avant qu'il ne soit finalisé avec une preuve de temps"
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of taco in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of fork in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "Il s'agit de la quantité totale de Taco dans la blockchain au plus récent sous-bloc contrôlé par vos clés privées. Il comprend des récompenses de culture gelées, mais pas des transactions entrantes et sortantes."
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
@@ -2379,7 +2379,7 @@ msgstr "Etat du portefeuille :"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.tacoWallet"
+#~ msgid "WalletItem.forkWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:107

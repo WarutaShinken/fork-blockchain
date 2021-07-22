@@ -3,17 +3,17 @@ import asyncio
 from blspy import G2Element
 from clvm_tools import binutils
 
-from taco.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from taco.rpc.full_node_rpc_client import FullNodeRpcClient
-from taco.types.blockchain_format.program import Program
-from taco.types.coin_solution import CoinSolution
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.spend_bundle import SpendBundle
-from taco.util.bech32m import decode_puzzle_hash
-from taco.util.condition_tools import parse_sexp_to_conditions
-from taco.util.config import load_config
-from taco.util.default_root import DEFAULT_ROOT_PATH
-from taco.util.ints import uint32, uint16
+from fork.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from fork.rpc.full_node_rpc_client import FullNodeRpcClient
+from fork.types.blockchain_format.program import Program
+from fork.types.coin_solution import CoinSolution
+from fork.types.condition_opcodes import ConditionOpcode
+from fork.types.spend_bundle import SpendBundle
+from fork.util.bech32m import decode_puzzle_hash
+from fork.util.condition_tools import parse_sexp_to_conditions
+from fork.util.config import load_config
+from fork.util.default_root import DEFAULT_ROOT_PATH
+from fork.util.ints import uint32, uint16
 
 
 def print_conditions(spend_bundle: SpendBundle):

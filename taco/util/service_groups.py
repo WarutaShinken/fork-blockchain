@@ -1,19 +1,19 @@
 from typing import KeysView, Generator
 
 SERVICES_FOR_GROUP = {
-    "all": "taco_harvester taco_timelord_launcher taco_timelord taco_farmer taco_full_node taco_wallet".split(),
-    "node": "taco_full_node".split(),
-    "harvester": "taco_harvester".split(),
-    "farmer": "taco_harvester taco_farmer taco_full_node taco_wallet".split(),
-    "farmer-no-wallet": "taco_harvester taco_farmer taco_full_node".split(),
-    "farmer-only": "taco_farmer".split(),
-    "timelord": "taco_timelord_launcher taco_timelord taco_full_node".split(),
-    "timelord-only": "taco_timelord".split(),
-    "timelord-launcher-only": "taco_timelord_launcher".split(),
-    "wallet": "taco_wallet taco_full_node".split(),
-    "wallet-only": "taco_wallet".split(),
-    "introducer": "taco_introducer".split(),
-    "simulator": "taco_full_node_simulator".split(),
+    "all": "fork_harvester fork_timelord_launcher fork_timelord fork_farmer fork_full_node fork_wallet".split(),
+    "node": "fork_full_node".split(),
+    "harvester": "fork_harvester".split(),
+    "farmer": "fork_harvester fork_farmer fork_full_node fork_wallet".split(),
+    "farmer-no-wallet": "fork_harvester fork_farmer fork_full_node".split(),
+    "farmer-only": "fork_farmer".split(),
+    "timelord": "fork_timelord_launcher fork_timelord fork_full_node".split(),
+    "timelord-only": "fork_timelord".split(),
+    "timelord-launcher-only": "fork_timelord_launcher".split(),
+    "wallet": "fork_wallet fork_full_node".split(),
+    "wallet-only": "fork_wallet".split(),
+    "introducer": "fork_introducer".split(),
+    "simulator": "fork_full_node_simulator".split(),
 }
 
 

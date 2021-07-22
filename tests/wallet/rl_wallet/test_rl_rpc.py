@@ -2,15 +2,15 @@ import asyncio
 
 import pytest
 
-from taco.rpc.wallet_rpc_api import WalletRpcApi
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.types.peer_info import PeerInfo
-from taco.util.bech32m import encode_puzzle_hash
-from taco.util.ints import uint16
-from taco.wallet.util.wallet_types import WalletType
+from fork.rpc.wallet_rpc_api import WalletRpcApi
+from fork.simulator.simulator_protocol import FarmNewBlockProtocol
+from fork.types.blockchain_format.coin import Coin
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.types.mempool_inclusion_status import MempoolInclusionStatus
+from fork.types.peer_info import PeerInfo
+from fork.util.bech32m import encode_puzzle_hash
+from fork.util.ints import uint16
+from fork.wallet.util.wallet_types import WalletType
 from tests.setup_nodes import self_hostname, setup_simulators_and_wallets
 from tests.time_out_assert import time_out_assert
 from tests.wallet.sync.test_wallet_sync import wallet_height_at_least

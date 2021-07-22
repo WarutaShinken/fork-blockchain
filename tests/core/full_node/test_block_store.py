@@ -7,10 +7,10 @@ from pathlib import Path
 import aiosqlite
 import pytest
 
-from taco.consensus.blockchain import Blockchain
-from taco.full_node.block_store import BlockStore
-from taco.full_node.coin_store import CoinStore
-from taco.util.db_wrapper import DBWrapper
+from fork.consensus.blockchain import Blockchain
+from fork.full_node.block_store import BlockStore
+from fork.full_node.coin_store import CoinStore
+from fork.util.db_wrapper import DBWrapper
 from tests.setup_nodes import bt, test_constants
 
 log = logging.getLogger(__name__)

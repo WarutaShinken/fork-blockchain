@@ -8,27 +8,27 @@ from typing import Optional, List, Dict
 import pytest
 from blspy import G1Element, AugSchemeMPL
 
-from taco.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from taco.plotting.create_plots import create_plots
-from taco.pools.pool_wallet_info import PoolWalletInfo, PoolSingletonState
-from taco.protocols import full_node_protocol
-from taco.protocols.full_node_protocol import RespondBlock
-from taco.rpc.rpc_server import start_rpc_server
-from taco.rpc.wallet_rpc_api import WalletRpcApi
-from taco.rpc.wallet_rpc_client import WalletRpcClient
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol, ReorgProtocol
-from taco.types.blockchain_format.proof_of_space import ProofOfSpace
-from taco.types.blockchain_format.sized_bytes import bytes32
+from fork.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from fork.plotting.create_plots import create_plots
+from fork.pools.pool_wallet_info import PoolWalletInfo, PoolSingletonState
+from fork.protocols import full_node_protocol
+from fork.protocols.full_node_protocol import RespondBlock
+from fork.rpc.rpc_server import start_rpc_server
+from fork.rpc.wallet_rpc_api import WalletRpcApi
+from fork.rpc.wallet_rpc_client import WalletRpcClient
+from fork.simulator.simulator_protocol import FarmNewBlockProtocol, ReorgProtocol
+from fork.types.blockchain_format.proof_of_space import ProofOfSpace
+from fork.types.blockchain_format.sized_bytes import bytes32
 
-from taco.types.peer_info import PeerInfo
-from taco.util.bech32m import encode_puzzle_hash
+from fork.types.peer_info import PeerInfo
+from fork.util.bech32m import encode_puzzle_hash
 from tests.block_tools import get_plot_dir, get_plot_tmp_dir
-from taco.util.config import load_config
-from taco.util.hash import std_hash
-from taco.util.ints import uint16, uint32
-from taco.wallet.derive_keys import master_sk_to_local_sk
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.wallet_types import WalletType
+from fork.util.config import load_config
+from fork.util.hash import std_hash
+from fork.util.ints import uint16, uint32
+from fork.wallet.derive_keys import master_sk_to_local_sk
+from fork.wallet.transaction_record import TransactionRecord
+from fork.wallet.util.wallet_types import WalletType
 from tests.setup_nodes import self_hostname, setup_simulators_and_wallets, bt
 from tests.time_out_assert import time_out_assert
 
@@ -669,11 +669,11 @@ class TestPoolWalletRpc:
                 if WalletType(int(summary["type"])) == WalletType.POOLING_WALLET:
                     assert False
 
-            async def have_taco():
+            async def have_fork():
                 await self.farm_blocks(full_node_api, our_ph, 1)
                 return (await wallets[0].get_confirmed_balance()) > 0
 
-            await time_out_assert(timeout=WAIT_SECS, function=have_taco)
+            await time_out_assert(timeout=WAIT_SECS, function=have_fork)
 
             creation_tx: TransactionRecord = await client.create_new_pool_wallet(
                 our_ph, "", 0, "localhost:5000", "new", "SELF_POOLING"
@@ -781,11 +781,11 @@ class TestPoolWalletRpc:
                 if WalletType(int(summary["type"])) == WalletType.POOLING_WALLET:
                     assert False
 
-            async def have_taco():
+            async def have_fork():
                 await self.farm_blocks(full_node_api, our_ph, 1)
                 return (await wallets[0].get_confirmed_balance()) > 0
 
-            await time_out_assert(timeout=WAIT_SECS, function=have_taco)
+            await time_out_assert(timeout=WAIT_SECS, function=have_fork)
 
             creation_tx: TransactionRecord = await client.create_new_pool_wallet(
                 pool_a_ph, "https://pool-a.org", 5, "localhost:5000", "new", "FARMING_TO_POOL"
@@ -868,11 +868,11 @@ class TestPoolWalletRpc:
                 if WalletType(int(summary["type"])) == WalletType.POOLING_WALLET:
                     assert False
 
-            async def have_taco():
+            async def have_fork():
                 await self.farm_blocks(full_node_api, our_ph, 1)
                 return (await wallets[0].get_confirmed_balance()) > 0
 
-            await time_out_assert(timeout=WAIT_SECS, function=have_taco)
+            await time_out_assert(timeout=WAIT_SECS, function=have_fork)
 
             creation_tx: TransactionRecord = await client.create_new_pool_wallet(
                 pool_a_ph, "https://pool-a.org", 5, "localhost:5000", "new", "FARMING_TO_POOL"

@@ -5,17 +5,17 @@ import logging
 import pytest
 from aiohttp import ClientSession, ClientTimeout, ServerDisconnectedError, WSCloseCode, WSMessage, WSMsgType
 
-from taco.full_node.full_node_api import FullNodeAPI
-from taco.protocols import full_node_protocol
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.protocols.shared_protocol import Handshake
-from taco.server.outbound_message import make_msg, Message
-from taco.server.rate_limits import RateLimiter
-from taco.server.server import ssl_context_for_client
-from taco.server.ws_connection import WSTacoConnection
-from taco.types.peer_info import PeerInfo
-from taco.util.ints import uint16, uint64
-from taco.util.errors import Err
+from fork.full_node.full_node_api import FullNodeAPI
+from fork.protocols import full_node_protocol
+from fork.protocols.protocol_message_types import ProtocolMessageTypes
+from fork.protocols.shared_protocol import Handshake
+from fork.server.outbound_message import make_msg, Message
+from fork.server.rate_limits import RateLimiter
+from fork.server.server import ssl_context_for_client
+from fork.server.ws_connection import WSTacoConnection
+from fork.types.peer_info import PeerInfo
+from fork.util.ints import uint16, uint64
+from fork.util.errors import Err
 from tests.setup_nodes import self_hostname, setup_simulators_and_wallets
 from tests.time_out_assert import time_out_assert
 
@@ -62,7 +62,7 @@ class TestDos:
         url = f"wss://{self_hostname}:{server_1._port}/ws"
 
         ssl_context = ssl_context_for_client(
-            server_2.taco_ca_crt_path, server_2.taco_ca_key_path, server_2.p2p_crt_path, server_2.p2p_key_path
+            server_2.fork_ca_crt_path, server_2.fork_ca_key_path, server_2.p2p_crt_path, server_2.p2p_key_path
         )
         ws = await session.ws_connect(
             url, autoclose=True, autoping=True, heartbeat=60, ssl=ssl_context, max_msg_size=100 * 1024 * 1024
@@ -111,7 +111,7 @@ class TestDos:
         url = f"wss://{self_hostname}:{server_1._port}/ws"
 
         ssl_context = ssl_context_for_client(
-            server_2.taco_ca_crt_path, server_2.taco_ca_key_path, server_2.p2p_crt_path, server_2.p2p_key_path
+            server_2.fork_ca_crt_path, server_2.fork_ca_key_path, server_2.p2p_crt_path, server_2.p2p_key_path
         )
         ws = await session.ws_connect(
             url, autoclose=True, autoping=True, heartbeat=60, ssl=ssl_context, max_msg_size=100 * 1024 * 1024
@@ -157,7 +157,7 @@ class TestDos:
         url = f"wss://{self_hostname}:{server_1._port}/ws"
 
         ssl_context = ssl_context_for_client(
-            server_2.taco_ca_crt_path, server_2.taco_ca_key_path, server_2.p2p_crt_path, server_2.p2p_key_path
+            server_2.fork_ca_crt_path, server_2.fork_ca_key_path, server_2.p2p_crt_path, server_2.p2p_key_path
         )
         ws = await session.ws_connect(
             url, autoclose=True, autoping=True, heartbeat=60, ssl=ssl_context, max_msg_size=100 * 1024 * 1024

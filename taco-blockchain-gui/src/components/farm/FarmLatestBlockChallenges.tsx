@@ -2,7 +2,7 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useSelector } from 'react-redux';
 import { Typography } from '@material-ui/core';
-import { Link, Table, Card } from '@taco/core';
+import { Link, Table, Card } from '@fork/core';
 import type { RootState } from '../../modules/rootReducer';
 import type { Row } from '../core/components/Table/Table';
 
@@ -65,7 +65,7 @@ export default function FarmLatestBlockChallenges() {
           *Want to explore Taco’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://taco.posat.io/"
+            href="https://fork.posat.io/"
             target="_blank"
           >
             Taco Explorer

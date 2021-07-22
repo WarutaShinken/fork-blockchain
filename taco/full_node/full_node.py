@@ -10,53 +10,53 @@ from typing import Any, Callable, Dict, List, Optional, Set, Tuple, Union
 import aiosqlite
 from blspy import AugSchemeMPL
 
-import taco.server.ws_connection as ws  # lgtm [py/import-and-import-from]
-from taco.consensus.block_creation import unfinished_block_to_full_block
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.blockchain import Blockchain, ReceiveBlockResult
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.difficulty_adjustment import get_next_sub_slot_iters_and_difficulty
-from taco.consensus.make_sub_epoch_summary import next_sub_epoch_summary
-from taco.consensus.multiprocess_validation import PreValidationResult
-from taco.consensus.pot_iterations import calculate_sp_iters
-from taco.full_node.block_store import BlockStore
-from taco.full_node.bundle_tools import detect_potential_template_generator
-from taco.full_node.coin_store import CoinStore
-from taco.full_node.full_node_store import FullNodeStore
-from taco.full_node.mempool_manager import MempoolManager
-from taco.full_node.signage_point import SignagePoint
-from taco.full_node.sync_store import SyncStore
-from taco.full_node.weight_proof import WeightProofHandler
-from taco.protocols import farmer_protocol, full_node_protocol, timelord_protocol, wallet_protocol
-from taco.protocols.full_node_protocol import (
+import fork.server.ws_connection as ws  # lgtm [py/import-and-import-from]
+from fork.consensus.block_creation import unfinished_block_to_full_block
+from fork.consensus.block_record import BlockRecord
+from fork.consensus.blockchain import Blockchain, ReceiveBlockResult
+from fork.consensus.constants import ConsensusConstants
+from fork.consensus.difficulty_adjustment import get_next_sub_slot_iters_and_difficulty
+from fork.consensus.make_sub_epoch_summary import next_sub_epoch_summary
+from fork.consensus.multiprocess_validation import PreValidationResult
+from fork.consensus.pot_iterations import calculate_sp_iters
+from fork.full_node.block_store import BlockStore
+from fork.full_node.bundle_tools import detect_potential_template_generator
+from fork.full_node.coin_store import CoinStore
+from fork.full_node.full_node_store import FullNodeStore
+from fork.full_node.mempool_manager import MempoolManager
+from fork.full_node.signage_point import SignagePoint
+from fork.full_node.sync_store import SyncStore
+from fork.full_node.weight_proof import WeightProofHandler
+from fork.protocols import farmer_protocol, full_node_protocol, timelord_protocol, wallet_protocol
+from fork.protocols.full_node_protocol import (
     RejectBlocks,
     RequestBlocks,
     RespondBlock,
     RespondBlocks,
     RespondSignagePoint,
 )
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.server.node_discovery import FullNodePeers
-from taco.server.outbound_message import Message, NodeType, make_msg
-from taco.server.server import TacoServer
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.pool_target import PoolTarget
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.types.blockchain_format.vdf import CompressibleVDFField, VDFInfo, VDFProof
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.types.full_block import FullBlock
-from taco.types.header_block import HeaderBlock
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.types.spend_bundle import SpendBundle
-from taco.types.unfinished_block import UnfinishedBlock
-from taco.util.bech32m import encode_puzzle_hash
-from taco.util.db_wrapper import DBWrapper
-from taco.util.errors import ConsensusError, Err
-from taco.util.ints import uint8, uint32, uint64, uint128
-from taco.util.path import mkdir, path_from_root
-from taco.util.safe_cancel_task import cancel_task_safe
-from taco.util.profiler import profile_task
+from fork.protocols.protocol_message_types import ProtocolMessageTypes
+from fork.server.node_discovery import FullNodePeers
+from fork.server.outbound_message import Message, NodeType, make_msg
+from fork.server.server import TacoServer
+from fork.types.blockchain_format.classgroup import ClassgroupElement
+from fork.types.blockchain_format.pool_target import PoolTarget
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from fork.types.blockchain_format.vdf import CompressibleVDFField, VDFInfo, VDFProof
+from fork.types.end_of_slot_bundle import EndOfSubSlotBundle
+from fork.types.full_block import FullBlock
+from fork.types.header_block import HeaderBlock
+from fork.types.mempool_inclusion_status import MempoolInclusionStatus
+from fork.types.spend_bundle import SpendBundle
+from fork.types.unfinished_block import UnfinishedBlock
+from fork.util.bech32m import encode_puzzle_hash
+from fork.util.db_wrapper import DBWrapper
+from fork.util.errors import ConsensusError, Err
+from fork.util.ints import uint8, uint32, uint64, uint128
+from fork.util.path import mkdir, path_from_root
+from fork.util.safe_cancel_task import cancel_task_safe
+from fork.util.profiler import profile_task
 
 
 class FullNode:
@@ -187,7 +187,7 @@ class FullNode:
             dns_servers = self.config["dns_servers"]
         elif self.config["port"] == 18620:
             # If `dns_servers` misses from the `config`, hardcode it if we're running mainnet.
-            dns_servers.append("dns-introducer.taconetwork.net")
+            dns_servers.append("dns-introducer.forknetwork.net")
         try:
             self.full_node_peers = FullNodePeers(
                 self.server,

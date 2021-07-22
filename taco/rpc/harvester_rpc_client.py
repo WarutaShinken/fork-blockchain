@@ -1,6 +1,6 @@
 from typing import Any, Dict, List
 
-from taco.rpc.rpc_client import RpcClient
+from fork.rpc.rpc_client import RpcClient
 
 
 class HarvesterRpcClient(RpcClient):

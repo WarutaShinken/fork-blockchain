@@ -7,13 +7,13 @@ from typing import Callable, Dict, List, Optional, Set, Tuple
 
 from blspy import G1Element
 
-import taco.server.ws_connection as ws  # lgtm [py/import-and-import-from]
-from taco.consensus.constants import ConsensusConstants
-from taco.plotting.plot_tools import PlotInfo
-from taco.plotting.plot_tools import add_plot_directory as add_plot_directory_pt
-from taco.plotting.plot_tools import get_plot_directories as get_plot_directories_pt
-from taco.plotting.plot_tools import load_plots
-from taco.plotting.plot_tools import remove_plot_directory as remove_plot_directory_pt
+import fork.server.ws_connection as ws  # lgtm [py/import-and-import-from]
+from fork.consensus.constants import ConsensusConstants
+from fork.plotting.plot_tools import PlotInfo
+from fork.plotting.plot_tools import add_plot_directory as add_plot_directory_pt
+from fork.plotting.plot_tools import get_plot_directories as get_plot_directories_pt
+from fork.plotting.plot_tools import load_plots
+from fork.plotting.plot_tools import remove_plot_directory as remove_plot_directory_pt
 
 log = logging.getLogger(__name__)
 

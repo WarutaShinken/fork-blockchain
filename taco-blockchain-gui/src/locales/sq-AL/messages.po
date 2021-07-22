@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: sq_AL\n"
-"Project-Id-Version: taco-blockchain\n"
+"Project-Id-Version: fork-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-07-06 23:47\n"
 "Last-Translator: \n"
 "Language-Team: Albanian\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: taco-blockchain\n"
+"X-Crowdin-Project: fork-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: sq\n"
-"X-Crowdin-File: /[Taco-Network.taco-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Taco-Network.fork-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -688,7 +688,7 @@ msgid "Error"
 msgstr "Gabim"
 
 #: src/components/wallet/standard/WalletStandard.tsx:456
-msgid "Error: Cannot send taco to coloured address. Please enter a taco address."
+msgid "Error: Cannot send fork to coloured address. Please enter a fork address."
 msgstr "Gabim: Nuk mund te dergojmë Taco në Adresën e dhënë. Ju lutemi vendosni një adresë Taco."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
@@ -1902,8 +1902,8 @@ msgstr "Gjatësia e intervalit të shpenzimeve (numri i blloqeve)"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (taco per interval): {0}"
-msgstr "Kufiri i shpenzimeve (taco për interval): {0}"
+msgid "Spending Limit (fork per interval): {0}"
+msgstr "Kufiri i shpenzimeve (fork për interval): {0}"
 
 #: src/components/fullNode/FullNode.jsx:100
 msgid "State"
@@ -2127,8 +2127,8 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr "Kjo është koha kur blloku është krijuar nga fermeri, e cila është para se të finalizohet me një provë të kohës"
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of taco in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "Kjo është sasia totale e taco në blockchain në nën bllok bllokun aktual që kontrollohet nga çelësat tuaj privatë. Ai përfshin shpërblime të ngrira, por jo në pritje të transaksioneve hyrëse dhe dalëse."
+msgid "This is the total amount of fork in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgstr "Kjo është sasia totale e fork në blockchain në nën bllok bllokun aktual që kontrollohet nga çelësat tuaj privatë. Ai përfshin shpërblime të ngrira, por jo në pritje të transaksioneve hyrëse dhe dalëse."
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
@@ -2379,7 +2379,7 @@ msgstr "Statusi i Portofolit:"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.tacoWallet"
+#~ msgid "WalletItem.forkWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:107

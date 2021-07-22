@@ -9,14 +9,14 @@ from typing import Callable, Dict, List, Optional, Set, Tuple, Union, Any
 
 from blspy import PrivateKey
 
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.multiprocess_validation import PreValidationResult
-from taco.pools.pool_puzzles import SINGLETON_LAUNCHER_HASH
-from taco.protocols import wallet_protocol
-from taco.protocols.full_node_protocol import RequestProofOfWeight, RespondProofOfWeight
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.protocols.wallet_protocol import (
+from fork.consensus.block_record import BlockRecord
+from fork.consensus.constants import ConsensusConstants
+from fork.consensus.multiprocess_validation import PreValidationResult
+from fork.pools.pool_puzzles import SINGLETON_LAUNCHER_HASH
+from fork.protocols import wallet_protocol
+from fork.protocols.full_node_protocol import RequestProofOfWeight, RespondProofOfWeight
+from fork.protocols.protocol_message_types import ProtocolMessageTypes
+from fork.protocols.wallet_protocol import (
     RejectAdditionsRequest,
     RejectRemovalsRequest,
     RequestAdditions,
@@ -26,33 +26,33 @@ from taco.protocols.wallet_protocol import (
     RespondHeaderBlocks,
     RespondRemovals,
 )
-from taco.server.node_discovery import WalletPeers
-from taco.server.outbound_message import Message, NodeType, make_msg
-from taco.server.server import TacoServer
-from taco.server.ws_connection import WSTacoConnection
-from taco.types.blockchain_format.coin import Coin, hash_coin_list
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_solution import CoinSolution
-from taco.types.header_block import HeaderBlock
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.types.peer_info import PeerInfo
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.errors import Err, ValidationError
-from taco.util.ints import uint32, uint128
-from taco.util.keychain import Keychain
-from taco.util.lru_cache import LRUCache
-from taco.util.merkle_set import MerkleSet, confirm_included_already_hashed, confirm_not_included_already_hashed
-from taco.util.path import mkdir, path_from_root
-from taco.wallet.block_record import HeaderBlockRecord
-from taco.wallet.derivation_record import DerivationRecord
-from taco.wallet.settings.settings_objects import BackupInitialized
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.backup_utils import open_backup_file
-from taco.wallet.util.wallet_types import WalletType
-from taco.wallet.wallet_action import WalletAction
-from taco.wallet.wallet_blockchain import ReceiveBlockResult
-from taco.wallet.wallet_state_manager import WalletStateManager
-from taco.util.profiler import profile_task
+from fork.server.node_discovery import WalletPeers
+from fork.server.outbound_message import Message, NodeType, make_msg
+from fork.server.server import TacoServer
+from fork.server.ws_connection import WSTacoConnection
+from fork.types.blockchain_format.coin import Coin, hash_coin_list
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.types.coin_solution import CoinSolution
+from fork.types.header_block import HeaderBlock
+from fork.types.mempool_inclusion_status import MempoolInclusionStatus
+from fork.types.peer_info import PeerInfo
+from fork.util.byte_types import hexstr_to_bytes
+from fork.util.errors import Err, ValidationError
+from fork.util.ints import uint32, uint128
+from fork.util.keychain import Keychain
+from fork.util.lru_cache import LRUCache
+from fork.util.merkle_set import MerkleSet, confirm_included_already_hashed, confirm_not_included_already_hashed
+from fork.util.path import mkdir, path_from_root
+from fork.wallet.block_record import HeaderBlockRecord
+from fork.wallet.derivation_record import DerivationRecord
+from fork.wallet.settings.settings_objects import BackupInitialized
+from fork.wallet.transaction_record import TransactionRecord
+from fork.wallet.util.backup_utils import open_backup_file
+from fork.wallet.util.wallet_types import WalletType
+from fork.wallet.wallet_action import WalletAction
+from fork.wallet.wallet_blockchain import ReceiveBlockResult
+from fork.wallet.wallet_state_manager import WalletStateManager
+from fork.util.profiler import profile_task
 
 
 class WalletNode:
@@ -117,7 +117,7 @@ class WalletNode:
     def get_key_for_fingerprint(self, fingerprint: Optional[int]) -> Optional[PrivateKey]:
         private_keys = self.keychain.get_all_private_keys()
         if len(private_keys) == 0:
-            self.log.warning("No keys present. Create keys with the UI, or with the 'taco keys' program.")
+            self.log.warning("No keys present. Create keys with the UI, or with the 'fork keys' program.")
             return None
 
         private_key: Optional[PrivateKey] = None

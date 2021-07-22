@@ -3,8 +3,8 @@ import { Trans } from '@lingui/macro';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Button, Grid, Typography, Divider } from '@material-ui/core';
-import { CardHero, Flex, Link } from '@taco/core';
-import { PlotHero as PlotHeroIcon } from '@taco/icons';
+import { CardHero, Flex, Link } from '@fork/core';
+import { PlotHero as PlotHeroIcon } from '@fork/icons';
 import PlotAddDirectoryDialog from '../PlotAddDirectoryDialog';
 import { refreshPlots } from '../../../modules/harvesterMessages';
 import useOpenDialog from '../../../hooks/useOpenDialog';
@@ -38,7 +38,7 @@ export default function PlotOverviewHero() {
               }
               <Link
                 target="_blank"
-                href="https://github.com/Taco-Network/taco-blockchain/wiki/Network-Architecture"
+                href="https://github.com/Taco-Network/fork-blockchain/wiki/Network-Architecture"
               >
                 Learn more
               </Link>

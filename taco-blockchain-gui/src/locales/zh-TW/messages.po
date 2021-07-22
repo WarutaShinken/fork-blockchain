@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: zh_TW\n"
-"Project-Id-Version: taco-blockchain\n"
+"Project-Id-Version: fork-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-07-07 05:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: taco-blockchain\n"
+"X-Crowdin-Project: fork-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: zh-TW\n"
-"X-Crowdin-File: /[Taco-Network.taco-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Taco-Network.fork-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -688,7 +688,7 @@ msgid "Error"
 msgstr "錯誤"
 
 #: src/components/wallet/standard/WalletStandard.tsx:456
-msgid "Error: Cannot send taco to coloured address. Please enter a taco address."
+msgid "Error: Cannot send fork to coloured address. Please enter a fork address."
 msgstr "錯誤：不能發送 Taco 到有色地址。請輸入 Taco 地址。"
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
@@ -1902,7 +1902,7 @@ msgstr "花費間隔長度 (區塊數量)"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (taco per interval): {0}"
+msgid "Spending Limit (fork per interval): {0}"
 msgstr "花用限制（每間隔可用 Taco）：{0}"
 
 #: src/components/fullNode/FullNode.jsx:100
@@ -2127,7 +2127,7 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr "這是塊農建立區塊的時間，這是在用時間證明最終確定之前的時間"
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of taco in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of fork in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "這是由你的私鑰控制的目前峰值子區塊中區塊鏈中 Taco 的總量。他包括凍結耕種獎勵，但不包括未結的匯入和匯出交易。"
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
@@ -2379,7 +2379,7 @@ msgstr "錢包狀態："
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.tacoWallet"
+#~ msgid "WalletItem.forkWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:107

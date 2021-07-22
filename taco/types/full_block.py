@@ -1,13 +1,13 @@
 from dataclasses import dataclass
 from typing import List, Optional, Set
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.foliage import Foliage, FoliageTransactionBlock, TransactionsInfo
-from taco.types.blockchain_format.program import SerializedProgram
-from taco.types.blockchain_format.reward_chain_block import RewardChainBlock
-from taco.types.blockchain_format.vdf import VDFProof
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.util.ints import uint32
-from taco.util.streamable import Streamable, streamable
+from fork.types.blockchain_format.coin import Coin
+from fork.types.blockchain_format.foliage import Foliage, FoliageTransactionBlock, TransactionsInfo
+from fork.types.blockchain_format.program import SerializedProgram
+from fork.types.blockchain_format.reward_chain_block import RewardChainBlock
+from fork.types.blockchain_format.vdf import VDFProof
+from fork.types.end_of_slot_bundle import EndOfSubSlotBundle
+from fork.util.ints import uint32
+from fork.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

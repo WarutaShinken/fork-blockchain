@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: th_TH\n"
-"Project-Id-Version: taco-blockchain\n"
+"Project-Id-Version: fork-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-07-06 23:46\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: taco-blockchain\n"
+"X-Crowdin-Project: fork-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: th\n"
-"X-Crowdin-File: /[Taco-Network.taco-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Taco-Network.fork-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -700,8 +700,8 @@ msgid "Error"
 msgstr "ข้อผิดพลาด"
 
 #: src/components/wallet/standard/WalletStandard.tsx:456
-msgid "Error: Cannot send taco to coloured address. Please enter a taco address."
-msgstr "ข้อผิดพลาด: ไม่สามารถส่งtacoไปที่coloures addressได้ กรุณากรอก Taco address"
+msgid "Error: Cannot send fork to coloured address. Please enter a fork address."
+msgstr "ข้อผิดพลาด: ไม่สามารถส่งforkไปที่coloures addressได้ กรุณากรอก Taco address"
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
 msgid "Estimated Network Space"
@@ -1905,7 +1905,7 @@ msgstr "ช่วงความกว้างของการจ่าย (�
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (taco per interval): {0}"
+msgid "Spending Limit (fork per interval): {0}"
 msgstr "จำกัดการจ่าย (Taco ต่อช่วงเวลา) : {0}"
 
 #: src/components/fullNode/FullNode.jsx:100
@@ -2114,7 +2114,7 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr "นี่เป็นเวลาที่ Farmer สร้าง Block ซึ่งก่อนที่จะสรุปผลด้วย Proof of Time"
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of taco in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of fork in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "นี่คือยอด Taco ทั้งหมดที่อยู่ใน Blockchain ในช่วง peak ของ Sub Block ล่าสุด ที่ถูกควบคุมโดยคีย์ส่วนตัวของคุณ ซึ่งรวมถึง Farming Reward ที่ถูกพักไว้ แต่ไม่ถูกเลื่อนการทำธุรกรรม"
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
@@ -2359,7 +2359,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.tacoWallet"
+#~ msgid "WalletItem.forkWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48

@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.hash import std_hash
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.util.hash import std_hash
 
 
 @dataclass(frozen=True)

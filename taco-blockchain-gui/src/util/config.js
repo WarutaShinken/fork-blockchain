@@ -16,7 +16,7 @@ function loadConfig(net) {
     const config_root_dir =
       'TACO_ROOT' in process.env
         ? process.env.TACO_ROOT
-        : path.join(os.homedir(), '.taco', net);
+        : path.join(os.homedir(), '.fork', net);
     const config = yaml.load(
       fs.readFileSync(path.join(config_root_dir, 'config/config.yaml'), 'utf8'),
     );

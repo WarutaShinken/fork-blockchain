@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core';
 // import { useRouteMatch, useHistory } from 'react-router';
 import { /*useDispatch, */ useSelector } from 'react-redux';
-import { FormatLargeNumber } from '@taco/core';
+import { FormatLargeNumber } from '@fork/core';
 import StandardWallet from './standard/WalletStandard';
 /*
 import {

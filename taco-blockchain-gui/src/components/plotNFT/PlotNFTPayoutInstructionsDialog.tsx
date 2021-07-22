@@ -9,7 +9,7 @@ import {
   Loading,
   TextField,
   Form,
-} from '@taco/core';
+} from '@fork/core';
 import {
   Button,
   Dialog,

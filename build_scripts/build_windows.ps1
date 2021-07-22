@@ -46,12 +46,12 @@ Write-Output "Taco Version is: $env:TACO_INSTALLER_VERSION"
 Write-Output "   ---"
 
 Write-Output "   ---"
-Write-Output "Build taco-blockchain wheels"
+Write-Output "Build fork-blockchain wheels"
 Write-Output "   ---"
 pip wheel --use-pep517 --extra-index-url https://pypi.chia.net/simple/ -f . --wheel-dir=.\build_scripts\win_build .
 
 Write-Output "   ---"
-Write-Output "Install taco-blockchain wheels into venv with pip"
+Write-Output "Install fork-blockchain wheels into venv with pip"
 Write-Output "   ---"
 
 Write-Output "pip install miniupnpc"
@@ -60,20 +60,20 @@ pip install --no-index --find-links=.\win_build\ miniupnpc
 # Write-Output "pip install setproctitle"
 # pip install setproctitle==1.2.2
 
-Write-Output "pip install taco-blockchain"
-pip install --no-index --find-links=.\win_build\ taco-blockchain
+Write-Output "pip install fork-blockchain"
+pip install --no-index --find-links=.\win_build\ fork-blockchain
 
 Write-Output "   ---"
-Write-Output "Use pyinstaller to create taco .exe's"
+Write-Output "Use pyinstaller to create fork .exe's"
 Write-Output "   ---"
-$SPEC_FILE = (python -c 'import taco; print(taco.PYINSTALLER_SPEC_PATH)') -join "`n"
+$SPEC_FILE = (python -c 'import fork; print(fork.PYINSTALLER_SPEC_PATH)') -join "`n"
 pyinstaller --log-level INFO $SPEC_FILE
 
 Write-Output "   ---"
-Write-Output "Copy taco executables to taco-blockchain-gui\"
+Write-Output "Copy fork executables to fork-blockchain-gui\"
 Write-Output "   ---"
-Copy-Item "dist\daemon" -Destination "..\taco-blockchain-gui\" -Recurse
-Set-Location -Path "..\taco-blockchain-gui" -PassThru
+Copy-Item "dist\daemon" -Destination "..\fork-blockchain-gui\" -Recurse
+Set-Location -Path "..\fork-blockchain-gui" -PassThru
 
 git status
 
@@ -97,9 +97,9 @@ If ($LastExitCode -gt 0){
 }
 
 Write-Output "   ---"
-Write-Output "Increase the stack for taco command for (taco plots create) chiapos limitations"
+Write-Output "Increase the stack for fork command for (fork plots create) chiapos limitations"
 # editbin.exe needs to be in the path
-editbin.exe /STACK:8000000 daemon\taco.exe
+editbin.exe /STACK:8000000 daemon\fork.exe
 Write-Output "   ---"
 
 $packageVersion = "$env:TACO_INSTALLER_VERSION"
@@ -109,7 +109,7 @@ Write-Output "packageName is $packageName"
 
 Write-Output "   ---"
 Write-Output "electron-packager"
-electron-packager . Taco --asar.unpack="**\daemon\**" --overwrite --icon=.\src\assets\img\taco.ico --app-version=$packageVersion
+electron-packager . Taco --asar.unpack="**\daemon\**" --overwrite --icon=.\src\assets\img\fork.ico --app-version=$packageVersion
 Write-Output "   ---"
 
 Write-Output "   ---"

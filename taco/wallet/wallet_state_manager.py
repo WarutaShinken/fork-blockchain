@@ -12,55 +12,55 @@ from blspy import AugSchemeMPL, G1Element, PrivateKey
 from chiabip158 import PyBIP158
 from cryptography.fernet import Fernet
 
-from taco import __version__
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.coinbase import pool_parent_id, farmer_parent_id
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.find_fork_point import find_fork_point_in_chain
-from taco.full_node.weight_proof import WeightProofHandler
-from taco.pools.pool_puzzles import SINGLETON_LAUNCHER_HASH, solution_to_extra_data
-from taco.pools.pool_wallet import PoolWallet
-from taco.protocols.wallet_protocol import PuzzleSolutionResponse, RespondPuzzleSolution
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_solution import CoinSolution
-from taco.types.full_block import FullBlock
-from taco.types.header_block import HeaderBlock
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.db_wrapper import DBWrapper
-from taco.util.errors import Err
-from taco.util.hash import std_hash
-from taco.util.ints import uint32, uint64, uint128
-from taco.wallet.block_record import HeaderBlockRecord
-from taco.wallet.cc_wallet.cc_wallet import CCWallet
-from taco.wallet.derivation_record import DerivationRecord
-from taco.wallet.derive_keys import master_sk_to_backup_sk, master_sk_to_wallet_sk
-from taco.wallet.key_val_store import KeyValStore
-from taco.wallet.rl_wallet.rl_wallet import RLWallet
-from taco.wallet.settings.user_settings import UserSettings
-from taco.wallet.trade_manager import TradeManager
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.backup_utils import open_backup_file
-from taco.wallet.util.transaction_type import TransactionType
-from taco.wallet.util.wallet_types import WalletType
-from taco.wallet.wallet import Wallet
-from taco.wallet.wallet_action import WalletAction
-from taco.wallet.wallet_action_store import WalletActionStore
-from taco.wallet.wallet_block_store import WalletBlockStore
-from taco.wallet.wallet_blockchain import WalletBlockchain
-from taco.wallet.wallet_coin_record import WalletCoinRecord
-from taco.wallet.wallet_coin_store import WalletCoinStore
-from taco.wallet.wallet_info import WalletInfo, WalletInfoBackup
-from taco.wallet.wallet_interested_store import WalletInterestedStore
-from taco.wallet.wallet_pool_store import WalletPoolStore
-from taco.wallet.wallet_puzzle_store import WalletPuzzleStore
-from taco.wallet.wallet_sync_store import WalletSyncStore
-from taco.wallet.wallet_transaction_store import WalletTransactionStore
-from taco.wallet.wallet_user_store import WalletUserStore
-from taco.server.server import TacoServer
-from taco.wallet.did_wallet.did_wallet import DIDWallet
+from fork import __version__
+from fork.consensus.block_record import BlockRecord
+from fork.consensus.coinbase import pool_parent_id, farmer_parent_id
+from fork.consensus.constants import ConsensusConstants
+from fork.consensus.find_fork_point import find_fork_point_in_chain
+from fork.full_node.weight_proof import WeightProofHandler
+from fork.pools.pool_puzzles import SINGLETON_LAUNCHER_HASH, solution_to_extra_data
+from fork.pools.pool_wallet import PoolWallet
+from fork.protocols.wallet_protocol import PuzzleSolutionResponse, RespondPuzzleSolution
+from fork.types.blockchain_format.coin import Coin
+from fork.types.blockchain_format.program import Program
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.types.coin_solution import CoinSolution
+from fork.types.full_block import FullBlock
+from fork.types.header_block import HeaderBlock
+from fork.types.mempool_inclusion_status import MempoolInclusionStatus
+from fork.util.byte_types import hexstr_to_bytes
+from fork.util.db_wrapper import DBWrapper
+from fork.util.errors import Err
+from fork.util.hash import std_hash
+from fork.util.ints import uint32, uint64, uint128
+from fork.wallet.block_record import HeaderBlockRecord
+from fork.wallet.cc_wallet.cc_wallet import CCWallet
+from fork.wallet.derivation_record import DerivationRecord
+from fork.wallet.derive_keys import master_sk_to_backup_sk, master_sk_to_wallet_sk
+from fork.wallet.key_val_store import KeyValStore
+from fork.wallet.rl_wallet.rl_wallet import RLWallet
+from fork.wallet.settings.user_settings import UserSettings
+from fork.wallet.trade_manager import TradeManager
+from fork.wallet.transaction_record import TransactionRecord
+from fork.wallet.util.backup_utils import open_backup_file
+from fork.wallet.util.transaction_type import TransactionType
+from fork.wallet.util.wallet_types import WalletType
+from fork.wallet.wallet import Wallet
+from fork.wallet.wallet_action import WalletAction
+from fork.wallet.wallet_action_store import WalletActionStore
+from fork.wallet.wallet_block_store import WalletBlockStore
+from fork.wallet.wallet_blockchain import WalletBlockchain
+from fork.wallet.wallet_coin_record import WalletCoinRecord
+from fork.wallet.wallet_coin_store import WalletCoinStore
+from fork.wallet.wallet_info import WalletInfo, WalletInfoBackup
+from fork.wallet.wallet_interested_store import WalletInterestedStore
+from fork.wallet.wallet_pool_store import WalletPoolStore
+from fork.wallet.wallet_puzzle_store import WalletPuzzleStore
+from fork.wallet.wallet_sync_store import WalletSyncStore
+from fork.wallet.wallet_transaction_store import WalletTransactionStore
+from fork.wallet.wallet_user_store import WalletUserStore
+from fork.server.server import TacoServer
+from fork.wallet.did_wallet.did_wallet import DIDWallet
 
 
 class WalletStateManager:

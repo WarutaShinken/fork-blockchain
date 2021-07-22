@@ -6,22 +6,22 @@ import pytest
 from blspy import AugSchemeMPL
 from chiapos import DiskPlotter
 
-from taco.consensus.coinbase import create_puzzlehash_for_pk
-from taco.plotting.plot_tools import stream_plot_info_ph, stream_plot_info_pk
-from taco.protocols import farmer_protocol
-from taco.rpc.farmer_rpc_api import FarmerRpcApi
-from taco.rpc.farmer_rpc_client import FarmerRpcClient
-from taco.rpc.harvester_rpc_api import HarvesterRpcApi
-from taco.rpc.harvester_rpc_client import HarvesterRpcClient
-from taco.rpc.rpc_server import start_rpc_server
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.bech32m import decode_puzzle_hash, encode_puzzle_hash
+from fork.consensus.coinbase import create_puzzlehash_for_pk
+from fork.plotting.plot_tools import stream_plot_info_ph, stream_plot_info_pk
+from fork.protocols import farmer_protocol
+from fork.rpc.farmer_rpc_api import FarmerRpcApi
+from fork.rpc.farmer_rpc_client import FarmerRpcClient
+from fork.rpc.harvester_rpc_api import HarvesterRpcApi
+from fork.rpc.harvester_rpc_client import HarvesterRpcClient
+from fork.rpc.rpc_server import start_rpc_server
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.util.bech32m import decode_puzzle_hash, encode_puzzle_hash
 from tests.block_tools import get_plot_dir
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.config import load_config, save_config
-from taco.util.hash import std_hash
-from taco.util.ints import uint8, uint16, uint32, uint64
-from taco.wallet.derive_keys import master_sk_to_wallet_sk, master_sk_to_pooling_authentication_sk
+from fork.util.byte_types import hexstr_to_bytes
+from fork.util.config import load_config, save_config
+from fork.util.hash import std_hash
+from fork.util.ints import uint8, uint16, uint32, uint64
+from fork.wallet.derive_keys import master_sk_to_wallet_sk, master_sk_to_pooling_authentication_sk
 from tests.setup_nodes import bt, self_hostname, setup_farmer_harvester, test_constants
 from tests.time_out_assert import time_out_assert
 

@@ -9,7 +9,7 @@ import {
   FormatBytes,
   StateColor,
   Address,
-} from '@taco/core';
+} from '@fork/core';
 import {
   Box,
   Typography,

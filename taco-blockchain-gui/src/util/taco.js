@@ -73,42 +73,42 @@ class Taco {
   }
 }
 
-export const taco_formatter = (value, unit) => new Taco(value, unit);
+export const fork_formatter = (value, unit) => new Taco(value, unit);
 
-taco_formatter.convert = convert;
-taco_formatter.setDisplay = units.setDisplay;
-taco_formatter.setUnit = units.setUnit;
-taco_formatter.getUnit = units.getUnit;
-taco_formatter.setFiat = (currency, rate, display = null) => {
+fork_formatter.convert = convert;
+fork_formatter.setDisplay = units.setDisplay;
+fork_formatter.setUnit = units.setUnit;
+fork_formatter.getUnit = units.getUnit;
+fork_formatter.setFiat = (currency, rate, display = null) => {
   units.setUnit(currency, 1 / rate, display);
 };
 
-export const mojo_to_taco = (mojo) => {
-  return taco_formatter(Number.parseInt(mojo), 'mojo').to('taco').value();
+export const mojo_to_fork = (mojo) => {
+  return fork_formatter(Number.parseInt(mojo), 'mojo').to('fork').value();
 };
 
-export const taco_to_mojo = (taco) => {
-  return taco_formatter(Number.parseFloat(Number(taco)), 'taco')
+export const fork_to_mojo = (fork) => {
+  return fork_formatter(Number.parseFloat(Number(fork)), 'fork')
     .to('mojo')
     .value();
 };
 
-export const mojo_to_taco_string = (mojo) => {
-  return taco_formatter(Number(mojo), 'mojo').to('taco').toString();
+export const mojo_to_fork_string = (mojo) => {
+  return fork_formatter(Number(mojo), 'mojo').to('fork').toString();
 };
 
 export const mojo_to_colouredcoin = (mojo) => {
-  return taco_formatter(Number.parseInt(mojo), 'mojo')
+  return fork_formatter(Number.parseInt(mojo), 'mojo')
     .to('colouredcoin')
     .value();
 };
 
 export const colouredcoin_to_mojo = (colouredcoin) => {
-  return taco_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
+  return fork_formatter(Number.parseFloat(Number(colouredcoin)), 'colouredcoin')
     .to('mojo')
     .value();
 };
 
 export const mojo_to_colouredcoin_string = (mojo) => {
-  return taco_formatter(Number(mojo), 'mojo').to('colouredcoin').toString();
+  return fork_formatter(Number(mojo), 'mojo').to('colouredcoin').toString();
 };

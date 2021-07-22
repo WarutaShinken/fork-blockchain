@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import icon from '../../assets/img/taco_circle.svg';
+import icon from '../../assets/img/fork_circle.svg';
 
 const GlobalStyle = createGlobalStyle`
   body,
@@ -70,7 +70,7 @@ const Spacer = styled.div`
   margin-bottom: 1rem;
 `;
 
-const url = 'https://taco.net';
+const url = 'https://fork.net';
 
 type Props = {
   version: string;
@@ -144,7 +144,7 @@ export default function About(props: Props) {
         </VersionsTable>
 
         <BugReport
-          href="https://github.com/Taco-Network/taco-blockchain/issues"
+          href="https://github.com/Taco-Network/fork-blockchain/issues"
           target="_blank"
         >
           Report an issue

@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from typing import List
 
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.util.streamable import Streamable, streamable
+from fork.types.condition_opcodes import ConditionOpcode
+from fork.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

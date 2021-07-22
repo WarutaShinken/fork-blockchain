@@ -9,8 +9,8 @@ import {
   Loading,
   StateColor,
   Table,
-} from '@taco/core';
-import { Status } from '@taco/icons';
+} from '@fork/core';
+import { Status } from '@fork/icons';
 import { useRouteMatch, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Box, Tooltip, Typography } from '@material-ui/core';

@@ -5,23 +5,23 @@ from typing import Callable, Optional, List, Any, Dict
 import aiohttp
 from blspy import AugSchemeMPL, G2Element, PrivateKey
 
-import taco.server.ws_connection as ws
-from taco.consensus.pot_iterations import calculate_iterations_quality, calculate_sp_interval_iters
-from taco.farmer.farmer import Farmer
-from taco.protocols import farmer_protocol, harvester_protocol
-from taco.protocols.harvester_protocol import PoolDifficulty
-from taco.protocols.pool_protocol import (
+import fork.server.ws_connection as ws
+from fork.consensus.pot_iterations import calculate_iterations_quality, calculate_sp_interval_iters
+from fork.farmer.farmer import Farmer
+from fork.protocols import farmer_protocol, harvester_protocol
+from fork.protocols.harvester_protocol import PoolDifficulty
+from fork.protocols.pool_protocol import (
     get_current_authentication_token,
     PoolErrorCode,
     PostPartialRequest,
     PostPartialPayload,
 )
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.server.outbound_message import NodeType, make_msg
-from taco.types.blockchain_format.pool_target import PoolTarget
-from taco.types.blockchain_format.proof_of_space import ProofOfSpace
-from taco.util.api_decorators import api_request, peer_required
-from taco.util.ints import uint32, uint64
+from fork.protocols.protocol_message_types import ProtocolMessageTypes
+from fork.server.outbound_message import NodeType, make_msg
+from fork.types.blockchain_format.pool_target import PoolTarget
+from fork.types.blockchain_format.proof_of_space import ProofOfSpace
+from fork.util.api_decorators import api_request, peer_required
+from fork.util.ints import uint32, uint64
 
 
 class FarmerAPI:

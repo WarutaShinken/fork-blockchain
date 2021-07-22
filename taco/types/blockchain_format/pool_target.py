@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.ints import uint32
-from taco.util.streamable import Streamable, streamable
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.util.ints import uint32
+from fork.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

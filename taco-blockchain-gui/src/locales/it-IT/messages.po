@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: it_IT\n"
-"Project-Id-Version: taco-blockchain\n"
+"Project-Id-Version: fork-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2021-07-06 23:47\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: taco-blockchain\n"
+"X-Crowdin-Project: fork-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: it\n"
-"X-Crowdin-File: /[Taco-Network.taco-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Taco-Network.fork-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -494,7 +494,7 @@ msgstr ""
 
 #: src/components/selectKey/SelectKey.tsx:182
 msgid "Create a new private key"
-msgstr "Crea una nuova tacove privata"
+msgstr "Crea una nuova forkve privata"
 
 #: src/components/wallet/create/WalletCreate.jsx:224
 msgid "Create admin wallet"
@@ -556,7 +556,7 @@ msgstr "Stato attuale dello scambio"
 
 #: src/components/selectKey/SelectKey.tsx:156
 msgid "DANGER: permanently delete private key"
-msgstr "ATTENZIONE: cancella permanentemente la tacove privata"
+msgstr "ATTENZIONE: cancella permanentemente la forkve privata"
 
 #: src/components/wallet/Wallets.tsx:53
 #~ msgid "DID Wallet"
@@ -600,19 +600,19 @@ msgstr ""
 #: src/components/selectKey/SelectKey.tsx:79
 #: src/components/selectKey/SelectKey.tsx:200
 msgid "Delete all keys"
-msgstr "Elimina tutte le tacovi"
+msgstr "Elimina tutte le forkvi"
 
 #: src/components/selectKey/SelectKey.tsx:58
 msgid "Delete key"
-msgstr "Elimina tacove"
+msgstr "Elimina forkve"
 
 #: src/components/selectKey/SelectKey.tsx:84
 msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
-msgstr "Eliminando tutte le tacovi queste saranno rimosse definitivamente dal tuo computer, assicurati di avere un backup. Sei sicuro di voler continuare?"
+msgstr "Eliminando tutte le forkvi queste saranno rimosse definitivamente dal tuo computer, assicurati di avere un backup. Sei sicuro di voler continuare?"
 
 #: src/components/selectKey/SelectKey.tsx:63
 msgid "Deleting the key will permanently remove the key from your computer, make sure you have backups. Are you sure you want to continue?"
-msgstr "Eliminando la tacove questa sarà rimossa definitivamente dal tuo computer, assicurati di avere un backup. Sei sicuro di voler continuare?"
+msgstr "Eliminando la forkve questa sarà rimossa definitivamente dal tuo computer, assicurati di avere un backup. Sei sicuro di voler continuare?"
 
 #: src/electron/main.tsx:304
 msgid "Developer"
@@ -688,8 +688,8 @@ msgid "Error"
 msgstr "Errore"
 
 #: src/components/wallet/standard/WalletStandard.tsx:456
-msgid "Error: Cannot send taco to coloured address. Please enter a taco address."
-msgstr "Errore: impossibile inviare taco ad un indirizzo colorato. Perfavore inserisci un indirizzo taco."
+msgid "Error: Cannot send fork to coloured address. Please enter a fork address."
+msgstr "Errore: impossibile inviare fork ad un indirizzo colorato. Perfavore inserisci un indirizzo fork."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:20
 msgid "Estimated Network Space"
@@ -877,7 +877,7 @@ msgstr ""
 
 #: src/components/wallet/standard/WalletStandard.tsx:583
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
-msgstr "HD o Hierarchical Deterministic keys sono un tipo di schema a tacove pubblica/tacove privata dove una tacove privata può avere un numero quasi infinito di tacovi pubbliche diverse (e quindi indirizzi di ricezione del wallet) che sono spendibili da una singola tacove privata."
+msgstr "HD o Hierarchical Deterministic keys sono un tipo di schema a forkve pubblica/forkve privata dove una forkve privata può avere un numero quasi infinito di forkvi pubbliche diverse (e quindi indirizzi di ricezione del wallet) che sono spendibili da una singola forkve privata."
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:49
 #~ msgid "Harvester ID"
@@ -1183,7 +1183,7 @@ msgstr "No"
 
 #: src/middleware/middleware_api.jsx:301
 msgid "No 24 word seed, since this key is imported."
-msgstr "Nessun seed di 24 parole, dato che la tacove è importata."
+msgstr "Nessun seed di 24 parole, dato che la forkve è importata."
 
 #: src/components/farm/card/FarmCardLastHeightFarmed.tsx:21
 msgid "No blocks farmed yet"
@@ -1195,7 +1195,7 @@ msgstr "Nessuna transazione precedente"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:156
 msgid "No private keys for one or both addresses. Safe only if you are sending rewards to another wallet."
-msgstr "Nessuna tacove privata per uno o entrambi gli indirizzi. Sicuro solo se stai inviando ricompense ad un altro wallet."
+msgstr "Nessuna forkve privata per uno o entrambi gli indirizzi. Sicuro solo se stai inviando ricompense ad un altro wallet."
 
 #: src/components/farm/FarmFullNodeConnections.tsx:32
 #: src/components/farm/FarmYourHarvesterNetwork.tsx:32
@@ -1751,7 +1751,7 @@ msgstr "Posizione seconda cartella temporanea"
 
 #: src/components/selectKey/SelectKey.tsx:145
 msgid "See private key"
-msgstr "Vedi tacove privata"
+msgstr "Vedi forkve privata"
 
 #: src/middleware/middleware_api.jsx:293
 msgid "Seed:"
@@ -1902,8 +1902,8 @@ msgstr "Lunghezza Intervallo di Spesa (numero di blocchi)"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
-msgid "Spending Limit (taco per interval): {0}"
-msgstr "Limite di Spesa (taco per intervallo): {0}"
+msgid "Spending Limit (fork per interval): {0}"
+msgstr "Limite di Spesa (fork per intervallo): {0}"
 
 #: src/components/fullNode/FullNode.jsx:100
 msgid "State"
@@ -2127,8 +2127,8 @@ msgid "This is the time the block was created by the farmer, which is before it 
 msgstr "Questo è il tempo in cui il blocco è stato creato dal coltivatore, che è precedente a quando è stato finalizzato con una prova di tempo"
 
 #: src/components/wallet/card/WalletCardTotalBalance.tsx:34
-msgid "This is the total amount of taco in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "Questo è l'ammontare totale di taco nella blockchain nell'attuale sottoblocco di picco che è controllato dalle tue tacovi private. Questo include le ricompense da farming congelate, ma non le transazioni in entrata e uscita che sono in attesa."
+msgid "This is the total amount of fork in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgstr "Questo è l'ammontare totale di fork nella blockchain nell'attuale sottoblocco di picco che è controllato dalle tue forkvi private. Questo include le ricompense da farming congelate, ma non le transazioni in entrata e uscita che sono in attesa."
 
 #: src/components/wallet/card/WalletCardPendingTotalBalance.tsx:29
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
@@ -2379,7 +2379,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.tacoWallet"
+#~ msgid "WalletItem.forkWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:107
@@ -2425,7 +2425,7 @@ msgstr "Il peso è la difficoltà aggiunta in totale a tutti i sottoblocchi fino
 
 #: src/components/selectKey/SelectKey.tsx:112
 msgid "Welcome to Taco. Please log in with an existing key, or create a new key."
-msgstr "Benvenuto da Taco. Per favore accedi con una tacove esistente, o crea una nuova tacove."
+msgstr "Benvenuto da Taco. Per favore accedi con una forkve esistente, o crea una nuova forkve."
 
 #: src/components/wallet/WalletAdd.tsx:66
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"

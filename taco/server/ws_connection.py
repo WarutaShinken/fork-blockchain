@@ -6,18 +6,18 @@ from typing import Any, Callable, Dict, List, Optional
 
 from aiohttp import WSCloseCode, WSMessage, WSMsgType
 
-from taco.cmds.init_funcs import taco_full_version_str
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.protocols.shared_protocol import Capability, Handshake
-from taco.server.outbound_message import Message, NodeType, make_msg
-from taco.server.rate_limits import RateLimiter
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.peer_info import PeerInfo
-from taco.util.errors import Err, ProtocolError
-from taco.util.ints import uint8, uint16
+from fork.cmds.init_funcs import fork_full_version_str
+from fork.protocols.protocol_message_types import ProtocolMessageTypes
+from fork.protocols.shared_protocol import Capability, Handshake
+from fork.server.outbound_message import Message, NodeType, make_msg
+from fork.server.rate_limits import RateLimiter
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.types.peer_info import PeerInfo
+from fork.util.errors import Err, ProtocolError
+from fork.util.ints import uint8, uint16
 
 # Each message is prepended with LENGTH_BYTES bytes specifying the length
-from taco.util.network import class_for_type, is_localhost
+from fork.util.network import class_for_type, is_localhost
 
 # Max size 2^(8*4) which is around 4GiB
 LENGTH_BYTES: int = 4
@@ -108,9 +108,9 @@ class WSTacoConnection:
             outbound_handshake = make_msg(
                 ProtocolMessageTypes.handshake,
                 Handshake(
-                    'taco-' + network_id,
+                    'fork-' + network_id,
                     protocol_version,
-                    taco_full_version_str(),
+                    fork_full_version_str(),
                     uint16(server_port),
                     uint8(local_type.value),
                     [(uint16(Capability.BASE.value), "1")],
@@ -132,7 +132,7 @@ class WSTacoConnection:
             if message_type != ProtocolMessageTypes.handshake:
                 raise ProtocolError(Err.INVALID_HANDSHAKE)
 
-            if inbound_handshake.network_id != 'taco-' + network_id:
+            if inbound_handshake.network_id != 'fork-' + network_id:
                 raise ProtocolError(Err.INCOMPATIBLE_NETWORK_ID)
 
             self.peer_server_port = inbound_handshake.server_port
@@ -157,14 +157,14 @@ class WSTacoConnection:
                 raise ProtocolError(Err.INVALID_HANDSHAKE)
 
             inbound_handshake = Handshake.from_bytes(message.data)
-            if inbound_handshake.network_id != 'taco-' + network_id:
+            if inbound_handshake.network_id != 'fork-' + network_id:
                 raise ProtocolError(Err.INCOMPATIBLE_NETWORK_ID)
             outbound_handshake = make_msg(
                 ProtocolMessageTypes.handshake,
                 Handshake(
-                    'taco-' + network_id,
+                    'fork-' + network_id,
                     protocol_version,
-                    taco_full_version_str(),
+                    fork_full_version_str(),
                     uint16(server_port),
                     uint8(local_type.value),
                     [(uint16(Capability.BASE.value), "1")],

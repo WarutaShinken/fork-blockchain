@@ -1,11 +1,11 @@
 from dataclasses import dataclass
 from typing import Any, List
 
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.clvm import int_to_bytes
-from taco.util.hash import std_hash
-from taco.util.ints import uint64
-from taco.util.streamable import Streamable, streamable
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.util.clvm import int_to_bytes
+from fork.util.hash import std_hash
+from fork.util.ints import uint64
+from fork.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

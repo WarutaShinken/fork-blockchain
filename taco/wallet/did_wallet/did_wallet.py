@@ -6,28 +6,28 @@ from typing import Dict, Optional, List, Any, Set, Tuple, Union
 
 from blspy import AugSchemeMPL, G1Element
 from secrets import token_bytes
-from taco.protocols import wallet_protocol
-from taco.protocols.wallet_protocol import RespondAdditions, RejectAdditionsRequest
-from taco.server.outbound_message import NodeType
-from taco.types.blockchain_format.coin import Coin
-from taco.types.coin_solution import CoinSolution
-from taco.types.announcement import Announcement
-from taco.types.blockchain_format.program import Program
-from taco.types.spend_bundle import SpendBundle
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.wallet.util.transaction_type import TransactionType
-from taco.util.ints import uint64, uint32, uint8
+from fork.protocols import wallet_protocol
+from fork.protocols.wallet_protocol import RespondAdditions, RejectAdditionsRequest
+from fork.server.outbound_message import NodeType
+from fork.types.blockchain_format.coin import Coin
+from fork.types.coin_solution import CoinSolution
+from fork.types.announcement import Announcement
+from fork.types.blockchain_format.program import Program
+from fork.types.spend_bundle import SpendBundle
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.wallet.util.transaction_type import TransactionType
+from fork.util.ints import uint64, uint32, uint8
 
-from taco.wallet.did_wallet.did_info import DIDInfo
-from taco.wallet.lineage_proof import LineageProof
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.wallet_types import WalletType
-from taco.wallet.wallet import Wallet
-from taco.wallet.wallet_coin_record import WalletCoinRecord
-from taco.wallet.wallet_info import WalletInfo
-from taco.wallet.derivation_record import DerivationRecord
-from taco.wallet.did_wallet import did_wallet_puzzles
-from taco.wallet.derive_keys import master_sk_to_wallet_sk
+from fork.wallet.did_wallet.did_info import DIDInfo
+from fork.wallet.lineage_proof import LineageProof
+from fork.wallet.transaction_record import TransactionRecord
+from fork.wallet.util.wallet_types import WalletType
+from fork.wallet.wallet import Wallet
+from fork.wallet.wallet_coin_record import WalletCoinRecord
+from fork.wallet.wallet_info import WalletInfo
+from fork.wallet.derivation_record import DerivationRecord
+from fork.wallet.did_wallet import did_wallet_puzzles
+from fork.wallet.derive_keys import master_sk_to_wallet_sk
 
 
 class DIDWallet:

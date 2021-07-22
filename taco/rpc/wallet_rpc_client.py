@@ -1,13 +1,13 @@
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Tuple
 
-from taco.pools.pool_wallet_info import PoolWalletInfo
-from taco.rpc.rpc_client import RpcClient
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.bech32m import decode_puzzle_hash
-from taco.util.ints import uint32, uint64
-from taco.wallet.transaction_record import TransactionRecord
+from fork.pools.pool_wallet_info import PoolWalletInfo
+from fork.rpc.rpc_client import RpcClient
+from fork.types.blockchain_format.coin import Coin
+from fork.types.blockchain_format.sized_bytes import bytes32
+from fork.util.bech32m import decode_puzzle_hash
+from fork.util.ints import uint32, uint64
+from fork.wallet.transaction_record import TransactionRecord
 
 
 class WalletRpcClient(RpcClient):
@@ -24,7 +24,7 @@ class WalletRpcClient(RpcClient):
         try:
             return await self.fetch(
                 "log_in",
-                {"host": "https://backup.taconetwork.net", "fingerprint": fingerprint, "type": "start"},
+                {"host": "https://backup.forknetwork.net", "fingerprint": fingerprint, "type": "start"},
             )
 
         except ValueError as e:
@@ -35,7 +35,7 @@ class WalletRpcClient(RpcClient):
             return await self.fetch(
                 "log_in",
                 {
-                    "host": "https://backup.taconetwork.net",
+                    "host": "https://backup.forknetwork.net",
                     "fingerprint": fingerprint,
                     "type": "restore_backup",
                     "file_path": file_path,
@@ -48,7 +48,7 @@ class WalletRpcClient(RpcClient):
         try:
             return await self.fetch(
                 "log_in",
-                {"host": "https://backup.taconetwork.net", "fingerprint": fingerprint, "type": "skip"},
+                {"host": "https://backup.forknetwork.net", "fingerprint": fingerprint, "type": "skip"},
             )
         except ValueError as e:
             return e.args[0]

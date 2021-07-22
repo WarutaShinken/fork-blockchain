@@ -2,17 +2,17 @@ from typing import Any, Dict, List, Optional
 
 import aiohttp
 
-from taco.cmds.units import units
-from taco.consensus.block_record import BlockRecord
-from taco.rpc.farmer_rpc_client import FarmerRpcClient
-from taco.rpc.full_node_rpc_client import FullNodeRpcClient
-from taco.rpc.wallet_rpc_client import WalletRpcClient
-from taco.util.config import load_config
-from taco.util.default_root import DEFAULT_ROOT_PATH
-from taco.util.ints import uint16
-from taco.util.misc import format_bytes
-from taco.util.misc import format_minutes
-from taco.util.network import is_localhost
+from fork.cmds.units import units
+from fork.consensus.block_record import BlockRecord
+from fork.rpc.farmer_rpc_client import FarmerRpcClient
+from fork.rpc.full_node_rpc_client import FullNodeRpcClient
+from fork.rpc.wallet_rpc_client import WalletRpcClient
+from fork.util.config import load_config
+from fork.util.default_root import DEFAULT_ROOT_PATH
+from fork.util.ints import uint16
+from fork.util.misc import format_bytes
+from fork.util.misc import format_minutes
+from fork.util.network import is_localhost
 
 SECONDS_PER_BLOCK = (24 * 3600) / 4608
 
@@ -207,9 +207,9 @@ async def summary(rpc_port: int, wallet_rpc_port: int, harvester_rpc_port: int, 
         print("Farming")
 
     if amounts is not None:
-        print(f"Total taco farmed: {amounts['farmed_amount'] / units['taco']}")
-        print(f"User transaction fees: {amounts['fee_amount'] / units['taco']}")
-        print(f"Block rewards: {(amounts['farmer_reward_amount'] + amounts['pool_reward_amount']) / units['taco']}")
+        print(f"Total fork farmed: {amounts['farmed_amount'] / units['fork']}")
+        print(f"User transaction fees: {amounts['fee_amount'] / units['fork']}")
+        print(f"Block rewards: {(amounts['farmer_reward_amount'] + amounts['pool_reward_amount']) / units['fork']}")
         print(f"Last height farmed: {amounts['last_height_farmed']}")
 
     class PlotStats:
@@ -268,8 +268,8 @@ async def summary(rpc_port: int, wallet_rpc_port: int, harvester_rpc_port: int, 
 
     if amounts is None:
         if wallet_not_running:
-            print("For details on farmed rewards and fees you should run 'taco start wallet' and 'taco wallet show'")
+            print("For details on farmed rewards and fees you should run 'fork start wallet' and 'fork wallet show'")
         elif wallet_not_ready:
-            print("For details on farmed rewards and fees you should run 'taco wallet show'")
+            print("For details on farmed rewards and fees you should run 'fork wallet show'")
     else:
-        print("Note: log into your key using 'taco wallet show' to see rewards for each key")
+        print("Note: log into your key using 'fork wallet show' to see rewards for each key")

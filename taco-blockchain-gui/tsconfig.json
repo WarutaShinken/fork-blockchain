@@ -8,7 +8,7 @@
       "esnext"
     ],
     "paths": {
-      "@taco/*": ["./components/*"]
+      "@fork/*": ["./components/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

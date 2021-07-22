@@ -18,12 +18,12 @@ function getInstallerConfig () {
     authors: 'Taco Network',
     version: process.env.TACO_INSTALLER_VERSION,
     noMsi: true,
-    iconUrl: 'https://raw.githubusercontent.com/Taco-Network/taco-blockchain/master/electron-react/src/assets/img/taco.ico',
+    iconUrl: 'https://raw.githubusercontent.com/Taco-Network/fork-blockchain/master/electron-react/src/assets/img/fork.ico',
     outputDirectory: path.join(outPath, 'windows-installer'),
     certificateFile: 'win_code_sign_cert.p12',
     certificatePassword: process.env.WIN_CODE_SIGN_PASS,
     exe: 'Taco.exe',
     setupExe: 'TacoSetup-' + process.env.TACO_INSTALLER_VERSION + '.exe',
-    setupIcon: path.join(rootPath, 'src', 'assets', 'img', 'taco.ico')
+    setupIcon: path.join(rootPath, 'src', 'assets', 'img', 'fork.ico')
   })
 }

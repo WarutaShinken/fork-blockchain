@@ -9,7 +9,7 @@ const fs = require('fs');
 const PY_MAC_DIST_FOLDER = '../../../app.asar.unpacked/daemon';
 const PY_WIN_DIST_FOLDER = '../../../app.asar.unpacked/daemon';
 const PY_DIST_FILE = 'daemon';
-const PY_FOLDER = '../taco/daemon';
+const PY_FOLDER = '../fork/daemon';
 const PY_MODULE = 'server'; // without .py suffix
 
 let pyProc = null;
@@ -47,8 +47,8 @@ const getExecutablePath = (dist_file) => {
 
 const getTacoVersion = () => {
   let version = null;
-  const exePath = getExecutablePath('taco');
-  // first see if we can get a taco exe in a standard location relative to where we are
+  const exePath = getExecutablePath('fork');
+  // first see if we can get a fork exe in a standard location relative to where we are
   try {
     version = child_process
       .execFileSync(exePath, ['version'], {
@@ -56,7 +56,7 @@ const getTacoVersion = () => {
       })
       .trim();
   } catch (e1) {
-    // that didn't work, let's try as if we're in the venv or taco is on the path
+    // that didn't work, let's try as if we're in the venv or fork is on the path
     try {
       version = child_process
         .execFileSync(path.basename(exePath), ['version'], {
