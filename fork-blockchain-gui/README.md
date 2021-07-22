@@ -1,5 +1,5 @@
 # fork-blockchain
-![Alt text](https://www.fork.net/img/fork_logo.svg)
+![Alt text](https://www.fork-network.network.net/img/fork_logo.svg)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Fork-Network/fork-blockchain?logo=GitHub)
 
@@ -22,3 +22,4 @@ Once installed, a
 [Quick Start Guide](https://github.com/Fork-Network/fork-blockchain/wiki/Quick-Start-Guide)
 is available from the repository
 [wiki](https://github.com/Fork-Network/fork-blockchain/wiki).
+# fork-blockchain-gui

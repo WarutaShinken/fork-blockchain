@@ -65,12 +65,12 @@ export default function FarmLatestBlockChallenges() {
           *Want to explore Fork’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://fork.posat.io/"
+            href="https://www.forkexplorer.com/"
             target="_blank"
           >
             Fork Explorer
           </Link>{' '}
-          built by that one smart guy on discord.
+          built by an open source developer.
         </Trans>
       </Typography>
     </Card>

@@ -263,6 +263,18 @@ msgstr "Koupit"
 #~ msgid "CCListItems.title"
 #~ msgstr ""
 
+#: src/electron/main.tsx:419
+msgid "Fork"
+msgstr "Fork"
+
+#: src/electron/main.tsx:358
+msgid "Fork Blockchain Wiki"
+msgstr "Fork Blockchain Wiki"
+
+#: src/components/wallet/standard/WalletStandard.tsx:647
+msgid "Fork Wallet"
+msgstr "Fork peněženka"
+
 #: src/components/selectKey/SelectKey.tsx:141
 msgid "Can be backed up to mnemonic seed"
 msgstr "Lze zálohovat do sledu 24 slov"
@@ -799,7 +811,7 @@ msgid "Fee"
 msgstr "Poplatek"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
-#~ msgid "Fee (TXFK)"
+#~ msgid "Fee (TXCH)"
 #~ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
@@ -1003,15 +1015,15 @@ msgid "Join a Pool"
 msgstr "Připojit se k poolu"
 
 #: src/components/plot/add/PlotAddNFT.tsx:44
-msgid "Join a pool and get consistent XFK farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Připojte se k poolu a získejte konzistentní odměnu XFK. Průměrné výnosy jsou stejné, ale mnohem méně volatilní."
+msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Připojte se k poolu a získejte konzistentní odměnu XCH. Průměrné výnosy jsou stejné, ale mnohem méně volatilní."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
-msgid "Join a pool and get consistent XFK farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Připojte se ke sdružení a získejte konzistentní odměnu XFK. Průměrné výnosy jsou stejné, ale mnohem méně volatilní. Přiřaďte vykreslování k NFT. Můžete snadno přepínat sdružení, aniž byste museli znovu vykreslovat."
+msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Připojte se ke sdružení a získejte konzistentní odměnu XCH. Průměrné výnosy jsou stejné, ale mnohem méně volatilní. Přiřaďte vykreslování k NFT. Můžete snadno přepínat sdružení, aniž byste museli znovu vykreslovat."
 
 #: src/components/plot/add/PlotAddNFT.tsx:133
-msgid "Join a pool and get more consistent XFK farming rewards. Create a plot NFT and assign your new plots to a group."
+msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
 msgstr ""
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:63
@@ -1245,7 +1257,7 @@ msgid "Not found Plots"
 msgstr "Pole nenalezena"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:184
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XFK reward for pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
 msgstr ""
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:120
@@ -1813,7 +1825,7 @@ msgid "Self Pooling"
 msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:105
-msgid "Self pool. When you win a block you will earn XFK rewards."
+msgid "Self pool. When you win a block you will earn XCH rewards."
 msgstr ""
 
 #: src/components/trading/CreateOffer.jsx:164
@@ -1866,7 +1878,7 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Přeskočí využití cílové složky pro farmaření"
 
 #: src/components/pool/PoolHero.tsx:26
-msgid "Smooth out your XFK farming rewards by joining a pool."
+msgid "Smooth out your XCH farming rewards by joining a pool."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:60
@@ -1979,36 +1991,24 @@ msgstr "Synchronizuji <0/>/<1/>"
 #~ msgstr "Syncing {progress}/{tip}"
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:15
-#~ msgid "TXFK Block Rewards"
+#~ msgid "TXCH Block Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardCoinbaseRewards.tsx:12
-#~ msgid "TXFK Farming Rewards"
+#~ msgid "TXCH Farming Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardFeesReward.tsx:12
-#~ msgid "TXFK Fees Collected"
+#~ msgid "TXCH Fees Collected"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:12
-#~ msgid "TXFK User Fees"
-#~ msgstr "TXFK User Fees"
+#~ msgid "TXCH User Fees"
+#~ msgstr "TXCH User Fees"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:15
-#~ msgid "TXFK User Transaction Fees"
+#~ msgid "TXCH User Transaction Fees"
 #~ msgstr ""
-
-#: src/electron/main.tsx:419
-msgid "Fork"
-msgstr "Fork"
-
-#: src/electron/main.tsx:358
-msgid "Fork Blockchain Wiki"
-msgstr "Fork Blockchain Wiki"
-
-#: src/components/wallet/standard/WalletStandard.tsx:647
-msgid "Fork Wallet"
-msgstr "Fork peněženka"
 
 #: src/components/pool/PoolInfo.tsx:37
 msgid "Target Puzzle Hash"
@@ -2084,8 +2084,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Souhrnná výše transakčních poplatků v tomto bloku. Vyplaceno farmářům."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:87
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XFK address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "Toto jsou instrukce, jak chce farmer dostávat platbu. Ve výchozím nastavení se jedná o adresu XFK, ale může být nastaven libovolný řetězec o velikosti menší než 1024 znaků, aby mohl zastupovat jiný blockchain nebo identifikátor platebního systému."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "Toto jsou instrukce, jak chce farmer dostávat platbu. Ve výchozím nastavení se jedná o adresu XCH, ale může být nastaven libovolný řetězec o velikosti menší než 1024 znaků, aby mohl zastupovat jiný blockchain nebo identifikátor platebního systému."
 
 #: src/components/plot/PlotsFailed.tsx:40
 msgid "These plots are invalid, you might want to delete them."
@@ -2198,6 +2198,10 @@ msgstr "Komu"
 msgid "Total Balance"
 msgstr "Celkový zůstatek"
 
+#: src/components/farm/card/FarmCardTotalForkFarmed.tsx:15
+#~ msgid "Total Fork Farmed"
+#~ msgstr ""
+
 #: src/components/fullNode/card/FullNodeCardTotalIterations.tsx:20
 msgid "Total Iterations"
 msgstr "Celkové iterace"
@@ -2213,10 +2217,6 @@ msgstr "Celková velikost pole:"
 #: src/components/farm/card/FarmCardTotalSizeOfPlots.tsx:12
 msgid "Total Size of Plots"
 msgstr "Celková velikost polí"
-
-#: src/components/farm/card/FarmCardTotalForkFarmed.tsx:15
-#~ msgid "Total Fork Farmed"
-#~ msgstr ""
 
 #: src/components/block/Block.jsx:225
 msgid "Total VDF Iterations"
@@ -2366,6 +2366,10 @@ msgstr ""
 msgid "Wallet Status:"
 msgstr ""
 
+#: src/components/wallet/Wallets.tsx:30
+#~ msgid "WalletItem.forkWallet"
+#~ msgstr ""
+
 #: src/components/wallet/Wallets.tsx:34
 #~ msgid "WalletItem.ccWallet"
 #~ msgstr ""
@@ -2376,10 +2380,6 @@ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:41
 #~ msgid "WalletItem.rlWallet"
-#~ msgstr ""
-
-#: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.forkWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:107

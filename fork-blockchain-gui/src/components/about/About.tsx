@@ -70,7 +70,7 @@ const Spacer = styled.div`
   margin-bottom: 1rem;
 `;
 
-const url = 'https://fork.net';
+const url = 'https://fork-network.net';
 
 type Props = {
   version: string;

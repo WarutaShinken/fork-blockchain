@@ -112,14 +112,14 @@ describe('units', () => {
     });
     it('updates an existing display', () => {
       units.setDisplay('fork', {
-        format: '{amount} TXFK',
+        format: '{amount} TXCH',
         fractionDigits: 0,
       });
 
       const result = units.getDisplay('fork');
 
       expect(result).toEqual({
-        format: '{amount} TXFK',
+        format: '{amount} TXCH',
         fractionDigits: 0,
       });
     });
