@@ -110,7 +110,7 @@ def configure(
 
         elif testnet == "false" or testnet == "f":
             print("Setting Mainnet")
-            mainnet_port = "18620"
+            mainnet_port = "3675"
             mainnet_introducer = "dns-introducer.forknetwork.net"
             net = "mainnet"
             config["full_node"]["port"] = int(mainnet_port)
