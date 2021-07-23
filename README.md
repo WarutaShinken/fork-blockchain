@@ -1,20 +1,9 @@
 Fork is a cryptocurrency forked from Chia and uses the Proof of Space and Time consensus algorithm
 
-Discord Channel: https://discord.gg/xguteVCYHh
+200,000 prefarm
 
-Website: https://forkcoin.net (coming soon)
+50 coins per blocks
 
-Introducer: dns-introducer.forkcoin.net:3675
+7/23/2021 - mainnet launch
 
-Changelog:
-v1.0.0 - Initial Release
-
-v1.1.0 - Prefarm removed
-       - Difficulty fixed
-
-v1.1.16 - Restarted chain because of unstable Difficulty
-
-v2.0.0 - Aligned with Chia 1.2.0
-       - Test NFT Plots and Pooling
-
-v2.0.1 - Fix "exchange" bug
+dns-introducer.forkcoin.net
