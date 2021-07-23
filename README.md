@@ -2,7 +2,7 @@ Fork is a cryptocurrency forked from Chia and uses the Proof of Space and Time c
 
 Discord Channel: https://discord.gg/xguteVCYHh
 
-Website: https://forknetwork.net (coming soon)
+Website: https://forkcoin.net (coming soon)
 
 Introducer: dns-introducer.forkcoin.net:3675
 

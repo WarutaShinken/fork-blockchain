@@ -43,9 +43,9 @@ dev_dependencies = [
 kwargs = dict(
     name="fork-blockchain",
     author="Mariano Sorgente",
-    author_email="mariano@forknetwork.net",
+    author_email="mariano@forkcoin.net",
     description="Fork blockchain full node, farmer, timelord, and wallet.",
-    url="https://forknetwork.net/",
+    url="https://forkcoin.net/",
     license="Apache License",
     python_requires=">=3.7, <4",
     keywords="fork blockchain node",
